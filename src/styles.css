@@ -76,13 +76,16 @@ body {
     --wavy_line: linear-gradient(to right, #09070e, #171226)
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 360px) {
     #img_globe, #img_settings, #img_bnb, #down_arrow, #img_deer2 {
-        width: 1.5rem;
+        width:25px;
+    }
+    .btn_cwallect{
+        width: 17%;
     }
     #sep2, #sec3, #sec4 {
-        gap: 0.4rem;
         align-items: center;
+        gap: 0.5rem;
     }
 
     #TradeDiv6 > #options7{
@@ -584,6 +587,9 @@ body{
 @media screen and (max-width: 1105px) {
     #sec_3 {
         display: none;
+    }
+    #sec_2{
+        left: 50px;
     }
 
     #ps_word {
@@ -3885,7 +3891,6 @@ html::-webkit-scrollbar-track {
     flex-direction: column;
     width: 1.8rem;
     height: 100%;
-    border: 1px solid red;
 }
 .TradeDiv3{
     position: relative;
