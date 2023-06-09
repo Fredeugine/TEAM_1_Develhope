@@ -1,5 +1,7 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 
+// react page
+
 export function Hompage(){
     useLayoutEffect(() => {
             const buttons = document.querySelectorAll(".buttons");
