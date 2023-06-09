@@ -142,11 +142,13 @@ body{
     justify-content: space-between;
     background-color: #27262c;
     font-family: kanit, sans-serif;
-    max-height: 2.3rem;
+    height: 56px;
     transition: top 0.2s ease-in-out;
     z-index: 1321231;
     align-items: center;
-    padding: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #383241;
 }
 
 
@@ -347,7 +349,7 @@ body{
 
 .options {
     visibility: hidden;
-    background-color: #191326;
+    background-color: #27262c;
     padding: 5px 0;
     display: flex;
     flex-direction: column;
@@ -393,14 +395,14 @@ body{
 #options6 {
     inset: 0 auto auto 0;
     visibility: hidden;
-    background-color: #191326;
+    background-color: #27262c;
     display: none;
     flex-direction: column;
     width: 15.6rem;
     height: auto;
     border-radius: 1.2rem;
     color: #b8add2;
-    z-index: 1;
+    z-index: 23423;
     position: absolute;
     top: 2.6rem;
     left: -2rem;
@@ -3883,6 +3885,7 @@ html::-webkit-scrollbar-track {
     flex-direction: column;
     width: 1.8rem;
     height: 100%;
+    border: 1px solid red;
 }
 .TradeDiv3{
     position: relative;
@@ -3949,17 +3952,18 @@ html::-webkit-scrollbar-track {
     will-change: opacity;
     transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
     opacity: 1;
+    z-index: 234234;
 }
-#options7::-webkit-scrollbar-thumb {
+#options72::-webkit-scrollbar-thumb {
     background-color: #b8add2;
     border-radius: 1rem;
     width: 0.8rem;
 }
-#options7::-webkit-scrollbar {
+#options72::-webkit-scrollbar {
     width: 0.5rem;
 }
 
-#options7::-webkit-scrollbar-track {
+#options72::-webkit-scrollbar-track {
     border-radius: 3px;
     background-color: inherit;
 }
