@@ -1,192 +1,150 @@
 import './Ifo.css'
 import './styles.css';
 import {useEffect} from "react";
+import {Navbar} from "./Hompage";
 export function IFOPage(){
     useEffect(() => {
-        {
-            const buttons = document.querySelectorAll(".buttons");
-            const options = document.querySelectorAll(".options");
-            const images = document.querySelectorAll('.imgs');
-            const bnbText = document.getElementById('bnb_word')
-            const walletText = document.querySelector('.btn_cwallect')
-            const globe = document.querySelector('#img_globe')
-            const toggleButton = document.querySelector(".toggle")
-            const options6 = document.getElementById('options6')
-            const ifoPAGE = document.querySelector('.ifoMain')
-            const bodyDisappear = document.querySelector('.bodyDisappear')
-            const btnDetails = document.querySelectorAll('.btnDetails')
-            const arrow = document.querySelectorAll('.darrow')
-            const heheDetails = document.querySelectorAll('.hehe')
-            const smallerAds = document.querySelectorAll('.adSmall')
-            const ifoPageButton = document.querySelector('#ifoPAGEBtn')
-            const EarnBtn = document.querySelector('#earnBtn')
-            const WinBtn = document.querySelector('#winBtn')
-            const NftBtn = document.querySelector('#nftBtn')
-            const DotsBtn = document.querySelector('#dotsBtn')
-            const Earn = document.querySelector('#earn')
-            const Win = document.querySelector('#win')
-            const Nft = document.querySelector('#nft')
-            const Dots = document.querySelector('#dots')
+        const btnDetails = document.querySelectorAll('.btnDetails')
+        const arrow = document.querySelectorAll('.darrow')
+        const heheDetails = document.querySelectorAll('.hehe')
+        const smallerAds = document.querySelectorAll('.adSmall')
 
-            function animateValue(obj, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    obj.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            }
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
 
-            const obj = document.getElementById("json");
-            const obj2 = document.getElementById("json2");
-            animateValue(obj, 855, 85, 1500);
-            animateValue(obj2, 718, 18 , 1500);
+        const obj = document.getElementById("json");
+        const obj2 = document.getElementById("json2");
+        animateValue(obj, 855, 85, 1500);
+        animateValue(obj2, 718, 18 , 1500);
 // Index JS Starts
-            const pageUp = document.querySelector(".page-up");
+        const pageUp = document.querySelector(".page-up");
 
-            window.addEventListener("scroll", () => {
-                if (window.pageYOffset > 450) {
-                    pageUp.style.display = "flex";
-                    pageUp.style.visibility =  "visible";
-                } else {
-                    pageUp.style.display = 'none';
-                }
-            });
-
-//div 6 table switch
-
-            const visibleTable = document.querySelector(".div6_visible")
-            const hiddenTable = document.querySelector(".div6_hidden")
-            const switchButton = document.querySelector(".div6_switch");
-            const title = document.querySelector(".d6farms");
-
-            function switchTable() {
-                if (visibleTable.style.display === "none") {
-                    visibleTable.style.display = "grid";
-                    hiddenTable.style.display = "none";
-                    title.textContent = "Farms";
-
-                } else {
-                    visibleTable.style.display = "none";
-                    hiddenTable.style.display = "grid";
-                    title.textContent = "Syrup Pools";
-                }
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 450) {
+                pageUp.style.display = "flex";
+                pageUp.style.visibility =  "visible";
+            } else {
+                pageUp.style.display = 'none';
             }
+        });
 
-            switchButton.addEventListener("click", switchTable);
-
-            setInterval(switchTable, 5000);
 //Index Js Ends
 // IFO SECTION
-            btnDetails.forEach(function (button,index){
-                var clicked = true
-                //changes Details to hide when clicked and arrow rotates 180deg
-                button.addEventListener('click',function (){
-                    if (clicked) {
-                        if (index === 0) {
-                            heheDetails[0].innerText = 'hide'
-                            arrow[0].style.transform = 'rotate(180deg)'
-                            clicked = false
-                        }
-                        if (index === 1) {
-                            heheDetails[1].innerText = 'hide'
-                            arrow[1].style.transform = 'rotate(180deg)'
-                            smallerAds[0].style.setProperty('display','block')
-                            clicked = false
-                        }
-                        if (index === 2) {
-                            heheDetails[2].innerText = 'hide'
-                            arrow[2].style.transform = 'rotate(180deg)'
-                            smallerAds[1].style.setProperty('display','block')
-                            clicked = false
-                        }
-                        if (index === 3) {
-                            heheDetails[3].innerText = 'hide'
-                            arrow[3].style.transform = 'rotate(180deg)'
-                            smallerAds[2].style.setProperty('display','block')
-                            clicked = false
-                        }
-                        if (index === 4) {
-                            heheDetails[4].innerText = 'hide'
-                            arrow[4].style.transform = 'rotate(180deg)'
-                            smallerAds[3].style.setProperty('display','block')
-                            clicked = false
-                        }
-                        if (index === 5) {
-                            heheDetails[5].innerText = 'hide'
-                            arrow[5].style.transform = 'rotate(180deg)'
-                            smallerAds[4].style.setProperty('display','block')
-                            clicked = false
-                        }
-                        if (index === 6) {
-                            heheDetails[6].innerText = 'hide'
-                            arrow[6].style.transform = 'rotate(180deg)'
-                            smallerAds[5].style.setProperty('display','block')
-                            clicked = false
-                        }
+        btnDetails.forEach(function (button,index){
+            var clicked = true
+            //changes Details to hide when clicked and arrow rotates 180deg
+            button.addEventListener('click',function (){
+                if (clicked) {
+                    if (index === 0) {
+                        heheDetails[0].innerText = 'hide'
+                        arrow[0].style.transform = 'rotate(180deg)'
+                        clicked = false
                     }
-                    else if (!clicked){
-                        if (index === 0){
-                            arrow[0].style.transform = 'rotate(0)'
-                            heheDetails[0].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 1){
-                            arrow[1].style.transform = 'rotate(0)'
-                            smallerAds[0].style.removeProperty('display')
-                            heheDetails[1].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 2){
-                            arrow[2].style.transform = 'rotate(0)'
-                            smallerAds[1].style.removeProperty('display')
-                            heheDetails[2].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 3){
-                            arrow[3].style.transform = 'rotate(0)'
-                            smallerAds[2].style.removeProperty('display')
-                            heheDetails[3].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 4){
-                            arrow[4].style.transform = 'rotate(0)'
-                            smallerAds[3].style.removeProperty('display')
-                            heheDetails[4].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 5){
-                            arrow[5].style.transform = 'rotate(0)'
-                            smallerAds[4].style.removeProperty('display')
-                            heheDetails[5].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 6){
-                            arrow[6].style.transform = 'rotate(0)'
-                            smallerAds[5].style.removeProperty('display')
-                            heheDetails[6].innerText = 'Details'
-                            clicked = true
-                        }
-                        if (index === 7){
-                            arrow[7].style.transform = 'rotate(0)'
-                            smallerAds[6].style.removeProperty('display')
-                            heheDetails[7].innerText = 'Details'
-                            clicked = true
-                        }
+                    if (index === 1) {
+                        heheDetails[1].innerText = 'hide'
+                        arrow[1].style.transform = 'rotate(180deg)'
+                        smallerAds[0].style.setProperty('display','block')
+                        clicked = false
                     }
+                    if (index === 2) {
+                        heheDetails[2].innerText = 'hide'
+                        arrow[2].style.transform = 'rotate(180deg)'
+                        smallerAds[1].style.setProperty('display','block')
+                        clicked = false
+                    }
+                    if (index === 3) {
+                        heheDetails[3].innerText = 'hide'
+                        arrow[3].style.transform = 'rotate(180deg)'
+                        smallerAds[2].style.setProperty('display','block')
+                        clicked = false
+                    }
+                    if (index === 4) {
+                        heheDetails[4].innerText = 'hide'
+                        arrow[4].style.transform = 'rotate(180deg)'
+                        smallerAds[3].style.setProperty('display','block')
+                        clicked = false
+                    }
+                    if (index === 5) {
+                        heheDetails[5].innerText = 'hide'
+                        arrow[5].style.transform = 'rotate(180deg)'
+                        smallerAds[4].style.setProperty('display','block')
+                        clicked = false
+                    }
+                    if (index === 6) {
+                        heheDetails[6].innerText = 'hide'
+                        arrow[6].style.transform = 'rotate(180deg)'
+                        smallerAds[5].style.setProperty('display','block')
+                        clicked = false
+                    }
+                }
+                else if (!clicked){
+                    if (index === 0){
+                        arrow[0].style.transform = 'rotate(0)'
+                        heheDetails[0].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 1){
+                        arrow[1].style.transform = 'rotate(0)'
+                        smallerAds[0].style.removeProperty('display')
+                        heheDetails[1].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 2){
+                        arrow[2].style.transform = 'rotate(0)'
+                        smallerAds[1].style.removeProperty('display')
+                        heheDetails[2].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 3){
+                        arrow[3].style.transform = 'rotate(0)'
+                        smallerAds[2].style.removeProperty('display')
+                        heheDetails[3].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 4){
+                        arrow[4].style.transform = 'rotate(0)'
+                        smallerAds[3].style.removeProperty('display')
+                        heheDetails[4].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 5){
+                        arrow[5].style.transform = 'rotate(0)'
+                        smallerAds[4].style.removeProperty('display')
+                        heheDetails[5].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 6){
+                        arrow[6].style.transform = 'rotate(0)'
+                        smallerAds[5].style.removeProperty('display')
+                        heheDetails[6].innerText = 'Details'
+                        clicked = true
+                    }
+                    if (index === 7){
+                        arrow[7].style.transform = 'rotate(0)'
+                        smallerAds[6].style.removeProperty('display')
+                        heheDetails[7].innerText = 'Details'
+                        clicked = true
+                    }
+                }
 
-                })
             })
-        };
+        })
     }, []);
 
 //IFO SECTION ENDS
     return(
         <>
+
             <a href="#" className="page-up">
                 <svg
                     viewBox="0 0 24 24"
@@ -199,186 +157,6 @@ export function IFOPage(){
                     <path d="M13 19V7.83001L17.88 12.71C18.27 13.1 18.91 13.1 19.3 12.71C19.69 12.32 19.69 11.69 19.3 11.3L12.71 4.71001C12.32 4.32001 11.69 4.32001 11.3 4.71001L4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7C5.08997 13.09 5.71997 13.09 6.10997 12.7L11 7.83001V19C11 19.55 11.45 20 12 20C12.55 20 13 19.55 13 19Z" />
                 </svg>
             </a>
-            <div id="navbar" className="navbar">
-                <div id="sep1" className="sep1">
-                    <div id="sec1" className="sec_1">
-                        <a href="index.html">
-                            <img
-                                className="imgs"
-                                id="img_beer"
-                                src="images/beer.svg"
-                            />
-                        </a>
-                        <span className="ps_word" id="ps_word">
-          PancakeSwap
-        </span>
-                    </div>
-                    <button className="buttons" id="btn_trade">
-                        Trade <span className="scale_borders" />
-                    </button>
-                    <div className="sec_2">
-                        <div className="options" id="options1">
-                            <a id="oo" href="swap.html">
-                                <span className="opt_kids">Swap</span>
-                            </a>
-                            <span className="opt_kids">Liquid</span>
-                            <span className="opt_kids">Liquidity</span>
-                            <span className="opt_kids" id="perpetual">
-            Perpetual{" "}
-                                <img src="images/l-arrow.svg" />
-          </span>
-                            <span className="opt_kids" id="bridge">
-            Bridge <img src="images/l-arrow.svg" />
-          </span>
-                        </div>
-                        <button className="buttons" id="btn_earn">
-                            Earn <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options2">
-                            <span className="opt_kids">Farms</span>
-                            <span className="opt_kids">Pools</span>
-                        </div>
-                        <button className="buttons" id="btn_win">
-                            Win
-                            <span className="green_dot" />
-                            <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options3">
-                            <span className="opt_kids">Trading Competition</span>
-                            <span className="opt_kids">Prediction(BETA)</span>
-                            <span className="opt_kids">Lottery</span>
-                            <span className="opt_kids" id="potteryDiv">
-            Pottery (BETA) <span className="pottery">POT OPEN</span>
-          </span>
-                        </div>
-                        <button className="buttons" id="btn_nft">
-                            NFT <span className="scale_borders" />
-                        </button>
-                        <button className="buttons" id="btn_(... .)">
-                            <span className="scale_borders" />
-                            <span className="div_cir_dot" id="div_cir_dot">
-            <span className="cir_dot" />
-            <span className="cir_dot" />
-            <span className="cir_dot" />
-                                &nbsp;
-          </span>
-                        </button>
-                        <div className="options" id="options4">
-                            <span className="opt_kids">Overview</span>
-                            <span className="opt_kids">Collections</span>
-                            <span className="opt_kids">Activity</span>
-                        </div>
-                        <div className="options" id="options5">
-                            <span className="opt_kids">Info</span>
-                            <a id="ifo" href="IFO.html">
-                                <span className="opt_kids">IFO</span>
-                            </a>
-                            <span className="opt_kids">Voting</span>
-                            <a id="o" href="affiliates-program.html">
-                                <span className="opt_kids">Affiliate Program</span>
-                            </a>
-                            <a id="ooo" href="leaderboard.html">
-                                <span className="opt_kids">Leaderboard</span>
-                            </a>
-                            <span className="opt_kids" id="blog">
-            Blog <img src="images/l-arrow.svg" />
-          </span>
-                            <span className="opt_kids" id="docs">
-            Docs <img src="images/l-arrow.svg" />{" "}
-          </span>
-                        </div>
-                    </div>
-                </div>
-                <div id="sep2" className="sep2">
-                    <div className="sec_3" id="sec_3">
-                        <img
-                            className="imgs"
-                            id="img_deer2"
-                            src="images/7186.png"
-                        />
-                        <span className="api-price">$1.234</span>
-                    </div>
-                    <div id="sec4" className="sec_4">
-                        <img
-                            className="imgs"
-                            id="img_globe"
-                            src="images/globe.svg"
-                        />
-                        <img
-                            className="imgs"
-                            id="img_settings"
-                            src="images/settings.svg"
-                        />
-                        <span id="div_bnb" className="div_bnb">
-          <img
-              className="imgs"
-              id="img_bnb"
-              src="images/56.png"
-          />
-          <p id="bnb_word" className="bnb_word">
-            BNB Smart Chain
-          </p>
-          <img
-              className="imgs"
-              id="down_arrow"
-              src="images/down arrow.svg"
-              alt=""
-          />
-        </span>
-                    </div>
-                    <div className="btn_cwallect">Connect Wallet</div>
-                    <div id="options6">
-                        <span className="opt_kids">Select a network</span>
-                        <span className="opt_kids">BNB Smart Chain</span>
-                        <span className="opt_kids">Ethereum</span>
-                        <span className="opt_kids">Aptos</span>
-                    </div>
-                </div>
-            </div>
-            <div className="options" id="options7">
-                <ul className="list">
-                    <li>Country 1</li>
-                    <li>Country 2</li>
-                    <li>Country 3</li>
-                    <li>Country 4</li>
-                    <li>Country 5</li>
-                    <li>Country 6</li>
-                    <li>Country 7</li>
-                    <li>Country 8</li>
-                    <li>Country 9</li>
-                    <li>Country 10</li>
-                    <li>Country 11</li>
-                    <li>Country 12</li>
-                    <li>Country 13</li>
-                    <li>Country 14</li>
-                    <li>Country 15</li>
-                    <li>Country 16</li>
-                    <li>Country 17</li>
-                    <li>Country 18</li>
-                    <li>Country 19</li>
-                    <li>Country 20</li>
-                    <li>Country 1</li>
-                    <li>Country 2</li>
-                    <li>Country 3</li>
-                    <li>Country 4</li>
-                    <li>Country 5</li>
-                    <li>Country 6</li>
-                    <li>Country 7</li>
-                    <li>Country 8</li>
-                    <li>Country 9</li>
-                    <li>Country 10</li>
-                    <li>Country 11</li>
-                    <li>Country 12</li>
-                    <li>Country 13</li>
-                    <li>Country 14</li>
-                    <li>Country 15</li>
-                    <li>Country 16</li>
-                    <li>Country 17</li>
-                    <li>Country 18</li>
-                    <li>Country 19</li>
-                    <li>Country 20</li>
-                </ul>
-            </div>
             <div className="ifoMain">
                 <div className="ifoSec1">
                     <div className="initialSec">

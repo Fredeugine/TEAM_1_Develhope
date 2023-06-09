@@ -2,6 +2,7 @@ import './Leaderboard.css'
 import './styles.css'
 
 import {useEffect} from "react";
+import {Navbar} from "./Hompage";
 export function LeaderboardPage(){
     useEffect(function (){
 

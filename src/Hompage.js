@@ -34,18 +34,18 @@ export function Navbar(){
             }
         }
         var prevScrollPos = window.pageYOffset;
-        var isScrollingUp = false;
+
 
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
 
             if (prevScrollPos > currentScrollPos) {
                 // Scrolling up
-                isScrollingUp = true;
+
                 document.getElementById("navbar").style.top = "0";
             } else {
                 // Scrolling down
-                isScrollingUp = false;
+
                 if (currentScrollPos > 1200) {
                     document.getElementById("navbar").style.top = "-100px";
                 }
@@ -186,6 +186,30 @@ export function Navbar(){
                 remove();
             });
         });
+
+//div 6 table switch
+
+        const visibleTable = document.querySelector(".div6_visible")
+        const hiddenTable = document.querySelector(".div6_hidden")
+        const switchButton = document.querySelector(".div6_switch");
+        const title = document.querySelector(".d6farms");
+
+        function switchTable() {
+            if (visibleTable.style.display === "none") {
+                visibleTable.style.display = "grid";
+                hiddenTable.style.display = "none";
+                title.textContent = "Farms";
+
+            } else {
+                visibleTable.style.display = "none";
+                hiddenTable.style.display = "grid";
+                title.textContent = "Syrup Pools";
+            }
+        }
+
+        switchButton.addEventListener("click", switchTable);
+
+        setInterval(switchTable, 5000);
     }, []);
 
     return(
@@ -199,7 +223,7 @@ export function Navbar(){
           PancakeSwap
         </span>
                 </div>
-                <div className="sec_2">
+                <div id='sec_2' className="sec_2">
                     <div id="TradeDiv1" className="TradeDiv">
                         <button className="buttons" id="btn_trade">
                             Trade <span className="scale_borders" />
@@ -320,7 +344,7 @@ export function Navbar(){
           <span id="div_bnb" className="div_bnb">
             <img className="imgs" id="img_bnb" src="images/56.png" />
             <p id="bnb_word" className="bnb_word">BNB Smart Chain</p>
-              <img className='darr' src='images/downarr.svg'/>
+              <img className='darr' src='images/down_arr.svg'/>
           </span>
                         <div id="options6">
                             <span id={'sln'} className="opt_kids">Select a network</span>
