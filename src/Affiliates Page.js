@@ -77,7 +77,7 @@ export function AffiliatesPage(){
                 detailsButton5.innerHTML = "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
             }
         });
-    })
+    },[])
     return(
         <>
             <a href="#" className="page-up" id="pageup">
