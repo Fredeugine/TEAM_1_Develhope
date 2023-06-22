@@ -92,7 +92,7 @@ export function Navbar(){
             button.addEventListener('mouseout', () => {
                let timeoutId = setTimeout(() => {
                     hideBoth();
-                }, 50);
+                }, 40);
                 divs.addEventListener('mouseout', () => {
                     hideBoth();
                 });
@@ -121,7 +121,7 @@ export function Navbar(){
             });
         })
         globe.addEventListener('mouseout', function () {
-            setTimeout(removes, 80);
+            setTimeout(removes, 60);
             options[5].addEventListener('mouseout', () => {
                 removes();
             });
@@ -152,7 +152,7 @@ export function Navbar(){
             });
         })
         bnbDiv.addEventListener('mouseout', function () {
-            setTimeout(remove, 60);
+            setTimeout(remove, 35);
             options6.addEventListener('mouseout', () => {
                 remove();
             });
@@ -255,9 +255,9 @@ export function Navbar(){
                         </button>
                         <div className="options" id="options5">
                             <span id={'info'} className="opt_kids">Info</span>
-                            <a id="ifo" href="IFO.html">
-                                <span className="opt_kids">IFO</span>
-                            </a>
+                            <Link to={'/IFO'}>
+                                <span id="ifo"  className="opt_kids">IFO</span>
+                            </Link>
                             <span className="opt_kids">Voting</span>
                             <a id="o" href="affiliates-program.html">
                                 <span className="opt_kids">Affiliate Program</span>
@@ -321,7 +321,7 @@ export function Navbar(){
                             <span id={'sln'} className="opt_kids">Select a Network</span>
                             <span id={'bnbsc'} className="opt_kids"><img className={'eth'} src={'/images/56.png'}/>BNB Smart Chain</span>
                             <span id={'apt'} className="opt_kids"><img id={'eth'} className={'eth'} src={'/images/1.png'}/>Ethereum</span>
-                            <Link to={'src/Aptos_Page.js'}><span id={'apt2'} className="opt_kids"><img className={'eth'} src={'/images/apt.png'}/>Aptos</span></Link>
+                            <Link to={'/Aptos'}><span id={'apt2'} className="opt_kids"><img className={'eth'} src={'/images/apt.png'}/>Aptos</span></Link>
                         </div>
                     </div>
                     <div className="btn_cwallect">Connect Wallet</div>

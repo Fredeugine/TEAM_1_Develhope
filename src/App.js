@@ -16,7 +16,8 @@ function App() {
 
   return (
       <div>
-     <Aptos_Page></Aptos_Page>
+
+     <Hompage></Hompage>
       </div>
 
   )

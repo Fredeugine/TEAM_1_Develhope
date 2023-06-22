@@ -45,7 +45,7 @@ export function Aptos_Page(){
                         <div className={'padd'}>
                             <div className={'crd2'}>
                                 <div className={'crr'}>
-                                    <span className={'crd2Inn1'}><span><img className={'aptt'} src={'/images/apt.png'}/></span>APT<span><img className='darr' src='/images/down_arrow.svg'/></span></span>
+                                    <span className={'crd2Inn1'}><span><img className={'aptt'} src={'/images/apt.png'}/></span>APT<span><img id={'drr2'} className='darr' src='/images/down_arrow.svg'/></span></span>
                                     <span><img className={'cpy'} src={'/images/copy.svg'}/></span>
                                 </div>
                                 <div className={'rocar'}>
@@ -57,7 +57,7 @@ export function Aptos_Page(){
 
                             <div className={'crd2'}>
                                 <div id={'crr2'} className={'crr'}>
-                                    <span className={'crd2Inn1'}><span><img className={'aptt'} src={'/images/7186.png'}/></span> <span>CAKE</span> <span><img className='darr' src='/images/down_arrow.svg'/></span></span>
+                                    <span className={'crd2Inn1'}><span><img className={'aptt2'} src={'/images/7186.png'}/></span> <span>CAKE</span> <span><img id={'drr'} className='darr' src='/images/down_arrow.svg'/></span></span>
                                     <span className={'crr'}><img className={'cpy'} src={'/images/copy.svg'}/> <img src={'/images/brr.svg'}/></span>
                                 </div>
                                 <div className={'rocar'}>
