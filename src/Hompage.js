@@ -1,365 +1,11 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 import './styles.css'
-export function Navbar(){
-    useEffect(() => {
-        const bnbText = document.getElementById('bnb_word')
-        const walletText = document.querySelector('.btn_cwallect')
-        const buttons = document.querySelectorAll(".buttons");
-        const options = document.querySelectorAll(".options");
-        const images = document.querySelectorAll('.imgs');
-        const globe = document.querySelector('#img_globe')
-        const toggleButton = document.querySelector(".toggle")
-        const options6 = document.getElementById('options6')
-        const EarnBtn = document.querySelector('#earnBtn')
-        const WinBtn = document.querySelector('#winBtn')
-        const NftBtn = document.querySelector('#nftBtn')
-        const DotsBtn = document.querySelector('#dotsBtn')
-        const Earn = document.querySelector('#earn')
-        const Win = document.querySelector('#win')
-        const Nft = document.querySelector('#nft')
-        const Dots = document.querySelector('#dots')
-        const cWal = document.querySelector('.cWallet')
-
-        function good() {
-            if (window.matchMedia("(max-width: 1127px)").matches) {
-                walletText.textContent ='Connect'
-                bnbText.textContent = 'BNB';
-
-            } else {
-                walletText.textContent ='Connect Wallet'
-                bnbText.textContent = 'BNB Smart Chain';
-            }
-            if (window.matchMedia("(max-width: 767px)").matches) {
-                bnbText.innerHTML = '';
-            }
-        }
-        var prevScrollPos = window.pageYOffset;
+import { Link, Route, Routes } from "react-router-dom";
+import {MbNavbar, Navbar} from "./Navbar";
+import {Aptos_Page} from "./Aptos_Page";
+import {IFOPage} from "./IFO Page";
 
 
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-
-            if (prevScrollPos > currentScrollPos) {
-                // Scrolling up
-
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                // Scrolling down
-
-                if (currentScrollPos > 1200) {
-                    document.getElementById("navbar").style.top = "-100px";
-                }
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-
-        window.onload = good;
-        window.onresize = good;
-
-
-        EarnBtn.addEventListener('mouseover',function (){
-            Earn.style.display = 'flex'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-
-        EarnBtn.addEventListener('mouseout',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-        WinBtn.addEventListener('mouseover',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'flex'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-        WinBtn.addEventListener('mouseout',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-        NftBtn.addEventListener('mouseover',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'flex'
-            Dots.style.display = 'none'
-        })
-        NftBtn.addEventListener('mouseout',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-        DotsBtn.addEventListener('mouseover',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'flex'
-        })
-        DotsBtn.addEventListener('mouseout',function (){
-            Earn.style.display = 'none'
-            Win.style.display = 'none'
-            Nft.style.display = 'none'
-            Dots.style.display = 'none'
-        })
-        buttons.forEach((button, index) => {
-            let timeoutId;
-            const divs = options[index]
-            button.addEventListener("mouseover", function showOptions() {
-                options[index].style.visibility = "visible";
-                divs.addEventListener("mouseover", function showOptions() {
-                    options[index].style.visibility = "visible";
-                });
-            });
-
-//
-            button.addEventListener('mouseout', () => {
-                timeoutId = setTimeout(() => {
-                    hideBoth();
-                }, 50);
-                divs.addEventListener('mouseout', () => {
-                    hideBoth();
-                });
-            });
-
-
-            // Function to hide the div
-            function hideBoth() {
-                // Only hide the div if both the button and the div are not currently being hovered over
-                const buttonNotHovered = !button.matches(':hover');
-                const divNotHovered = !divs.matches(':hover');
-
-                if (buttonNotHovered && divNotHovered) {
-                    divs.style.visibility = 'hidden';
-                }
-            }
-
-        })
-
-        globe.addEventListener('mouseover', function todo() {
-            options[5].style.visibility = "visible";
-            options[5].style.display = "flex";
-            options[5].id = 'options72'
-            options[5].addEventListener("mouseover", function showOptions() {
-                options6.style.visibility = "visible";
-            });
-        })
-        globe.addEventListener('mouseout', function () {
-            setTimeout(removes, 80);
-            options[5].addEventListener('mouseout', () => {
-                removes();
-            });
-        });
-
-        function removes() {
-            if (!globe.matches(':hover') && !options[5].matches(':hover')) {
-                options[5].style.visibility = 'hidden';
-                options[5].style.display = "none";
-
-            }
-        }
-
-        function remove() {
-            if (!bnbDiv.matches(':hover') && !options6.matches(':hover')) {
-                options6.style.visibility = 'hidden';
-                options6.style.display = "none";
-            }
-        }
-
-
-        const bnbDiv = document.querySelector('#div_bnb')
-        bnbDiv.addEventListener('mouseover', function todo() {
-            options6.style.visibility = "visible";
-            options6.style.display = "flex";
-            options6.addEventListener("mouseover", function showOptions() {
-                options[5].style.visibility = "visible";
-            });
-        })
-        bnbDiv.addEventListener('mouseout', function () {
-            setTimeout(remove, 60);
-            options6.addEventListener('mouseout', () => {
-                remove();
-            });
-        });
-
-//div 6 table switch
-
-        const visibleTable = document.querySelector(".div6_visible")
-        const hiddenTable = document.querySelector(".div6_hidden")
-        const switchButton = document.querySelector(".div6_switch");
-        const title = document.querySelector(".d6farms");
-
-        function switchTable() {
-            if (visibleTable.style.display === "none") {
-                visibleTable.style.display = "grid";
-                hiddenTable.style.display = "none";
-                title.textContent = "Farms";
-
-            } else {
-                visibleTable.style.display = "none";
-                hiddenTable.style.display = "grid";
-                title.textContent = "Syrup Pools";
-            }
-        }
-
-        switchButton.addEventListener("click", switchTable);
-
-        setInterval(switchTable, 5000);
-    }, []);
-
-    return(
-        <div id="navbar" className="navbar">
-            <div id="sep1" className="sep1">
-                <div id="sec1" className="sec_1">
-                    <a href="index.html">
-                        <img className="imgs" id="img_beer" src="images/beer.svg" />
-                    </a>
-                    <span className="ps_word" id="ps_word">
-          PancakeSwap
-        </span>
-                </div>
-                <div id='sec_2' className="sec_2">
-                    <div id="TradeDiv1" className="TradeDiv">
-                        <button className="buttons" id="btn_trade">
-                            Trade <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options1">
-                            <a id="oo" href="swap.html">
-                                <span className="opt_kids">Swap</span>
-                            </a>
-                            <span className="opt_kids">Liquid</span>
-                            <span className="opt_kids">Liquidity</span>
-                            <span className="opt_kids" id="perpetual">Perpetual<img src="images/l-arrow.svg" /></span>
-                            <span className="opt_kids" id="bridge">Bridge<img src="images/l-arrow.svg" /></span>
-                        </div>
-                    </div>
-                    <div id="TradeDiv2" className="TradeDiv">
-                        <button className="buttons" id="btn_earn">
-                            Earn <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options2">
-                            <span id={'farms'} className="opt_kids">Farms</span>
-                            <span id={'pl'} className="opt_kids">Pools</span>
-                        </div>
-                    </div>
-                    <div id="TradeDiv3" className="TradeDiv">
-                        <button className="buttons" id="btn_win">
-                            Win
-                            <span className="green_dot" />
-                            <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options3">
-                            <span id={'tr'} className="opt_kids">Trading Competition</span>
-                            <span className="opt_kids">Prediction(BETA)</span>
-                            <span className="opt_kids">Lottery</span>
-                            <span className="opt_kids" id="potteryDiv">
-              Pottery (BETA) <span className="pottery">POT OPEN</span>
-            </span>
-                        </div>
-                    </div>
-                    <div id="TradeDiv4" className="TradeDiv">
-                        <button className="buttons" id="btn_nft">
-                            NFT <span className="scale_borders" />
-                        </button>
-                        <div className="options" id="options4">
-                            <span id={'ovr'} className="opt_kids">Overview</span>
-                            <span className="opt_kids">Collections</span>
-                            <span id={'act'} className="opt_kids">Activity</span>
-                        </div>
-                    </div>
-                    <div id="TradeDiv5" className="TradeDiv">
-                        <button className="buttons" id="btn_(... .)">
-                            <span className="scale_borders" />
-                            <span className="div_cir_dot" id="div_cir_dot">
-              <span className="cir_dot" />
-              <span className="cir_dot" />
-              <span className="cir_dot" />
-                                &nbsp;
-            </span>
-                        </button>
-                        <div className="options" id="options5">
-                            <span id={'info'} className="opt_kids">Info</span>
-                            <a id="ifo" href="IFO.html">
-                                <span className="opt_kids">IFO</span>
-                            </a>
-                            <span className="opt_kids">Voting</span>
-                            <a id="o" href="affiliates-program.html">
-                                <span className="opt_kids">Affiliate Program</span>
-                            </a>
-                            <a id="ooo" href="leaderboard.html">
-                                <span className="opt_kids">Leaderboard</span>
-                            </a>
-                            <span className="opt_kids" id="blog">Blog <img src="images/l-arrow.svg" /></span>
-                            <span className="opt_kids" id="docs">Docs <img src="images/l-arrow.svg" />{" "}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sep2" className="sep2">
-                <div className="sec_3" id="sec_3">
-                    <img className="imgs" id="img_deer2" src="images/7186.png" />
-                    <span className="api-price">$1.234</span>
-                </div>
-                <div id="sec4" className="sec_4">
-                    <div id="TradeDiv6" className="TradeDiv2">
-                        <img className="imgs" id="img_globe" src="images/globe.svg" />
-                        <div className="options" id="options7">
-                            <span>العربية</span>
-                            <span>বাংলা</span>
-                            <span>Engspansh</span>
-                            <span>Deutsch</span>
-                            <span>Ελληνικά</span>
-                            <span>Español</span>
-                            <span>Suomalainen</span>
-                            <span>Fispanpino</span>
-                            <span>Français</span>
-                            <span>हिंदी</span>
-                            <span>Magyar</span>
-                            <span>Bahasa Indonesia</span>
-                            <span>Itaspanano</span>
-                            <span>日本語</span>
-                            <span>한국어</span>
-                            <span>Nederlands</span>
-                            <span>Polski</span>
-                            <span>Português (Brazil)</span>
-                            <span>Português</span>
-                            <span>Română</span>
-                            <span>Русский</span>
-                            <span>Svenska</span>
-                            <span>தமிழ்</span>
-                            <span>Türkçe</span>
-                            <span>Українська</span>
-                            <span>Tiếng Việt</span>
-                            <span>简体中文</span>
-                            <span>繁體中文</span>
-                        </div>
-                    </div>
-                    <img className="imgs" id="img_settings" src="images/settings.svg" />
-                    <div id="TradeDiv7" className="TradeDiv3">
-          <span id="div_bnb" className="div_bnb">
-            <img className="imgs" id="img_bnb" src="images/56.png" />
-            <p id="bnb_word" className="bnb_word">BNB Smart Chain</p>
-              <img className='darr' src='images/down_arr.svg'/>
-          </span>
-                        <div id="options6">
-                            <span id={'sln'} className="opt_kids">Select a network</span>
-                            <span className="opt_kids">BNB Smart Chain</span>
-                            <span className="opt_kids">Ethereum</span>
-                            <span id={'apt'} className="opt_kids">Aptos</span>
-                        </div>
-                    </div>
-                    <div className="btn_cwallect">Connect Wallet</div>
-                </div>
-
-            </div>
-        </div>
-    )
-}
 export function Hompage(){
     useEffect(() => {
 
@@ -379,6 +25,11 @@ export function Hompage(){
     }, [])
     return(
         <>
+            <Routes>
+                <Route path="/Aptos" element={<Aptos_Page></Aptos_Page>}></Route>
+                <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>
+
+            </Routes>
             <Navbar></Navbar>
             <a href="#" className="page-up">
                 <svg
@@ -421,43 +72,43 @@ export function Hompage(){
                                                                     <div className="carousel-animation">
                                                                         <div className="flag_slide1">
                                                                             <img
-                                                                                src="images/v3LaunchFlag.webp"
+                                                                                src="/images/v3LaunchFlag.webp"
                                                                                 alt="flag-image"
                                                                             />
                                                                         </div>
                                                                         <div className="rock_slide1">
                                                                             <img
                                                                                 className="bigRock"
-                                                                                src="images/v3LaunchBg.webp"
+                                                                                src="/images/v3LaunchBg.webp"
                                                                                 alt="moon-image"
                                                                             />
                                                                             <img
                                                                                 className="smallRock"
-                                                                                src="images/v3LaunchBgMobile.webp"
+                                                                                src="/images/v3LaunchBgMobile.webp"
                                                                                 alt="moon-image"
                                                                             />
                                                                         </div>
                                                                         <div className="bunny_slide1">
                                                                             <img
                                                                                 className="bigBunny"
-                                                                                src="images/v3LaunchBunny.webp"
+                                                                                src="/images/v3LaunchBunny.webp"
                                                                                 alt="bunny-image"
                                                                             />
                                                                             <img
                                                                                 className="smallBunny"
-                                                                                src="images/v3LaunchBunnyMobile.png"
+                                                                                src="/images/v3LaunchBunnyMobile.png"
                                                                                 alt="bunny-image"
                                                                             />
                                                                         </div>
                                                                         <div className="bnb_slide1">
                                                                             <img
-                                                                                src="images/v3LaunchBnb.webp"
+                                                                                src="/images/v3LaunchBnb.webp"
                                                                                 alt="bnb-image"
                                                                             />
                                                                         </div>
                                                                         <div className="eth_slide1">
                                                                             <img
-                                                                                src="images/v3LaunchEth.webp"
+                                                                                src="/images/v3LaunchEth.webp"
                                                                                 alt="eth-image"
                                                                             />
                                                                         </div>
@@ -470,7 +121,7 @@ export function Hompage(){
                                                                             <div className="text_slide1">
                                     <span className="icon_slide1">
                                       <img
-                                          src="images/bunny-icon-slides.svg"
+                                          src="/images/bunny-icon-slides.svg"
                                           alt="bunny-icon"
                                       />
                                     </span>
@@ -487,7 +138,7 @@ export function Hompage(){
                                                                                     <div>
                                                                                         <img
                                                                                             className="discover-icon"
-                                                                                            src="images/discover-icon.svg"
+                                                                                            src="/images/discover-icon.svg"
                                                                                             alt="learn image"
                                                                                         />
                                                                                     </div>
@@ -501,28 +152,28 @@ export function Hompage(){
                                                         <div className="slide" id="slide2">
                                                             <img
                                                                 className="images"
-                                                                src="images/2-1200.png"
+                                                                src="/images/2-1200.png"
                                                                 alt="Image 2"
                                                             />
                                                         </div>
                                                         <div className="slide" id="slide3">
                                                             <img
                                                                 className="images"
-                                                                src="images/3-1200.png"
+                                                                src="/images/3-1200.png"
                                                                 alt="Image 3"
                                                             />
                                                         </div>
                                                         <div className="slide" id="slide4">
                                                             <img
                                                                 className="images"
-                                                                src="images/4-1200.png"
+                                                                src="/images/4-1200.png"
                                                                 alt="Image 4"
                                                             />
                                                         </div>
                                                         <div className="slide" id="slide5">
                                                             <img
                                                                 className="images"
-                                                                src="images/5-1200.png"
+                                                                src="/images/5-1200.png"
                                                                 alt="Image 5"
                                                             />
                                                         </div>
@@ -561,11 +212,11 @@ export function Hompage(){
                                 <img
                                     className="img_astronaut"
                                     id="img_astronaut"
-                                    src="images/astronaut-bunny.png"
+                                    src="/images/astronaut-bunny.png"
                                 />
-                                <img className="top_star" src="images/star-top-r@2x.webp" />
-                                <img className="bottom_star" src="images/star-r@2x.webp" />
-                                <img className="bottom_star" src="images/star-l@2x.webp" />
+                                <img className="top_star" src="/images/star-top-r@2x.webp" />
+                                <img className="bottom_star" src="/images/star-r@2x.webp" />
+                                <img className="bottom_star" src="/images/star-l@2x.webp" />
                             </div>
                         </div>
                     </div>
@@ -592,7 +243,7 @@ export function Hompage(){
                 <div className="div4_parent_container">
                     <div className="div4_container">
                         <div className="div4">
-                            <img className="div4_svg1" src="images/div4_1.svg" />
+                            <img className="div4_svg1" src="/images/div4_1.svg" />
                             <h2 id="div4_text1">Used by millions.</h2>
                             <h2 id="div4_text2">Trusted with billions.</h2>
                             <div id="div4_text3">
@@ -609,7 +260,7 @@ export function Hompage(){
                                         <div className="div4_box4">
                                             <div className="div4_box5">
                                                 <div className="div4_svg4">
-                                                    <img src="images/div4_2a.svg" />
+                                                    <img src="/images/div4_2a.svg" />
                                                 </div>
                                                 <h2 className="div4_box_a_text1">1.6 million</h2>
                                                 <h2 id="div4_box_a_text1a">users</h2>
@@ -623,7 +274,7 @@ export function Hompage(){
                                         <div className="div4_box4">
                                             <div className="div4_box5">
                                                 <div className="div4_svg4">
-                                                    <img src="images/div4_2b.svg" />
+                                                    <img src="/images/div4_2b.svg" />
                                                 </div>
                                                 <h2 className="div4_box_a_text1">21 million</h2>
                                                 <h2 id="div4_box_a_text2a">trades</h2>
@@ -637,7 +288,7 @@ export function Hompage(){
                                         <div className="div4_box4">
                                             <div className="div4_box5">
                                                 <div className="div4_svg4">
-                                                    <img src="images/div4_2c.svg" />
+                                                    <img src="/images/div4_2c.svg" />
                                                 </div>
                                                 <h2 className="div4_box_a_text1">$3.2 billion</h2>
                                                 <h2 id="div4_box_a_text3a">staked</h2>
@@ -654,7 +305,7 @@ export function Hompage(){
                     <img
                         alt="transition_div4_div5"
                         className="transition_div4_div5"
-                        src="images/transition_div4_div5.png"
+                        src="/images/transition_div4_div5.png"
                     />
                 </div>
                 <div className="trade_anything">
@@ -680,7 +331,7 @@ export function Hompage(){
                                             <img
                                                 alt="learn image"
                                                 className="Learn_trade_svg"
-                                                src="images/learn.svg"
+                                                src="/images/learn.svg"
                                             />
                                         </div>
                                     </a>
@@ -692,17 +343,17 @@ export function Hompage(){
                                         <img
                                             alt="BNB token"
                                             id="trade_bnb_img"
-                                            srcSet="images/BNB_trade_anything.jpg"
+                                            srcSet="/images/BNB_trade_anything.jpg"
                                         />
                                         <img
                                             alt="BTC token"
                                             id="trade_btc_img"
-                                            srcSet="images/BTC_trade_anything.jpg"
+                                            srcSet="/images/BTC_trade_anything.jpg"
                                         />
                                         <img
                                             alt="CAKE token"
                                             id="trade_cake_img"
-                                            srcSet="images/CAKE_trade_anything.jpg"
+                                            srcSet="/images/CAKE_trade_anything.jpg"
                                         />
                                     </div>
                                 </div>
@@ -714,24 +365,24 @@ export function Hompage(){
                     <img
                         alt="transition_div5_div6"
                         className="transition_div5_div6"
-                        src="images/transition_div5_div6.png"
+                        src="/images/transition_div5_div6.png"
                     />
                 </div>
                 <div className="div6earnpassive">
                     <section id="div6upperpart" className="div6upperpart">
                         <div id="div6images" className="div6images">
                             <img
-                                src="images/pie@2x.webp"
+                                src="/images/pie@2x.webp"
                                 id="div6pieimg"
                                 className="div6pieimg"
                             />
                             <img
-                                src="images/stonks@2x.webp"
+                                src="/images/stonks@2x.webp"
                                 id="div6stonksimg"
                                 className="div6stonksimg"
                             />
                             <img
-                                src="images/folder@2x.webp"
+                                src="/images/folder@2x.webp"
                                 id="div6folderimg"
                                 className="div6folderimg"
                             />
@@ -758,7 +409,7 @@ export function Hompage(){
                                     id="div6_learn"
                                 >
                                     Learn
-                                    <img src="images/div8_1.svg" />
+                                    <img src="/images/div8_1.svg" />
                                 </a>
                             </div>
                         </div>
@@ -770,7 +421,7 @@ export function Hompage(){
             <span className="d6farms">Farms</span>
           </span>
                             <button name="arrows" className="div6_switch">
-                                <img src="images/arrows.svg" />
+                                <img src="/images/arrows.svg" />
                             </button>
                         </h1>
                         <div className="div6topsyruppools">
@@ -846,7 +497,7 @@ export function Hompage(){
                             </div>
                             <div id="div72cards" className="div72cards">
                                 <div className="div7yellowcard" id="div7yellowcard">
-                                    <img src="images/magicball.svg" id="div7magicball" />
+                                    <img src="/images/magicball.svg" id="div7magicball" />
                                     <div id="div7yctext">
                                         <p id="div7yctext1">Prediction</p>
                                         <h1 id="div7yctext2">$1.2 billion</h1>
@@ -874,7 +525,7 @@ export function Hompage(){
                                     </button>
                                 </div>
                                 <div className="div7purplecard" id="div7purplecard">
-                                    <img src="images/div7ticket.svg" id="div7ticket" />
+                                    <img src="/images/div7ticket.svg" id="div7ticket" />
                                     <p id="div7pctext1">Lottery</p>
                                     <p id="div7pctext2">$58,915</p>
                                     <p id="div7pctext3">in CAKE prizes this round</p>
@@ -902,31 +553,31 @@ export function Hompage(){
                             </div>
                         </div>
                         <div id="div7images">
-                            <img src="images/2@2x.webp" id="div7ball2" className="div7ball2" />
+                            <img src="/images/2@2x.webp" id="div7ball2" className="div7ball2" />
                             <img
-                                src="images/bottom-left@2x.webp"
+                                src="/images/bottom-left@2x.webp"
                                 id="div7greenbottomcard"
                                 className="div7greenbottomcard"
                             />
                             <img
-                                src="images/card-top-right@2x.webp"
+                                src="/images/card-top-right@2x.webp"
                                 id="div7greencard"
                                 className="div7greencard"
                             />
                             <img
-                                src="images/green@2x.webp"
+                                src="/images/green@2x.webp"
                                 id="div7bluecard"
                                 className="div7bluecard"
                             />
                             <img
-                                src="images/red@2x.webp"
+                                src="/images/red@2x.webp"
                                 id="div7redcard"
                                 className="div7redcard"
                             />
-                            <img src="images/4@2x.webp" id="div7ball4" className="div7ball4" />
-                            <img src="images/6@2x.webp" id="div7ball6" className="div7ball6" />
-                            <img src="images/7@2x.webp" id="div7ball7" className="div7ball7" />
-                            <img src="images/9@2x.webp" id="div7ball9" className="div7ball9" />
+                            <img src="/images/4@2x.webp" id="div7ball4" className="div7ball4" />
+                            <img src="/images/6@2x.webp" id="div7ball6" className="div7ball6" />
+                            <img src="/images/7@2x.webp" id="div7ball7" className="div7ball7" />
+                            <img src="/images/9@2x.webp" id="div7ball9" className="div7ball9" />
                         </div>
                     </div>
                 </div>
@@ -956,22 +607,22 @@ export function Hompage(){
                                         className="div8_learn"
                                     >
                                         Learn
-                                        <img src="images/div8_1.svg" />
+                                        <img src="/images/div8_1.svg" />
                                     </a>
                                 </div>
                             </div>
                             <div className="div8_top_right">
                                 <div className="div8_tr_top_right">
-                                    <img src="images/div8_top-right@2x.webp" />
+                                    <img src="/images/div8_top-right@2x.webp" />
                                 </div>
                                 <div className="div8_tr_bottom_right">
-                                    <img src="images/div8_bottom-right@2x.webp" />
+                                    <img src="/images/div8_bottom-right@2x.webp" />
                                 </div>
                                 <div className="div8_tr_middle">
-                                    <img src="images/div8_coin@2x.webp" />
+                                    <img src="/images/div8_coin@2x.webp" />
                                 </div>
                                 <div className="div8_tr_top_left">
-                                    <img src="images/div8_top-left@2x.webp" />
+                                    <img src="/images/div8_top-left@2x.webp" />
                                 </div>
                             </div>
                         </div>
@@ -1009,7 +660,7 @@ export function Hompage(){
                             <div className="pageinfo">
                                 <div className="pagebox">
                                     <img
-                                        src="images/div9svgs/first.svg"
+                                        src="/images/div9svgs/first.svg"
                                         alt="firstsvg"
                                         className="firstsvg"
                                     />
@@ -1018,24 +669,24 @@ export function Hompage(){
                             <div className="many1">
                                 <div className="many2">
                                     <div className="many3">
-                                        <img src="images/1-bottom@2x.webp" className="coin1" />
+                                        <img src="/images/1-bottom@2x.webp" className="coin1" />
                                         <div className="many4">
                                             <img
-                                                src="images/1-bottom@2x.webp"
+                                                src="/images/1-bottom@2x.webp"
                                                 alt="Pancake flying on the bottom"
                                                 className="coin2"
                                             />
                                         </div>
                                         <div className="many4">
                                             <img
-                                                src="images/1-left@2x.webp"
+                                                src="/images/1-left@2x.webp"
                                                 alt="Pancake flying on the left"
                                                 className="coin2"
                                             />
                                         </div>
                                         <div className="many4">
                                             <img
-                                                src="images/1-top@2x.webp"
+                                                src="/images/1-top@2x.webp"
                                                 alt="Pancake flying on the top"
                                                 className="coin2"
                                             />
@@ -1044,24 +695,24 @@ export function Hompage(){
                                 </div>
                                 <div className="many5">
                                     <div className="many3">
-                                        <img src="images/2-bottom@2x.webp" className="coin1" />
+                                        <img src="/images/2-bottom@2x.webp" className="coin1" />
                                         <div className="many4">
                                             <img
-                                                src="images/2-bottom@2x.webp"
+                                                src="/images/2-bottom@2x.webp"
                                                 alt="Pancake flying on the bottom"
                                                 className="coin2"
                                             />
                                         </div>
                                         <div className="many4">
                                             <img
-                                                src="images/2-top@2x.webp"
+                                                src="/images/2-top@2x.webp"
                                                 alt="Pancake flying on the top"
                                                 className="coin2"
                                             />
                                         </div>
                                         <div className="many4">
                                             <img
-                                                src="images/2-right@2x.webp"
+                                                src="/images/2-right@2x.webp"
                                                 alt="Pancake flying on the right"
                                                 className="coin2"
                                             />
@@ -1078,7 +729,7 @@ export function Hompage(){
                                 <a href="https://docs.pancakeswap.finance/" className="education">
                                     Learn how to start
                                     <img
-                                        src="images/div9svgs/sec.svg"
+                                        src="/images/div9svgs/sec.svg"
                                         alt="secsvg"
                                         className="secsvg"
                                     />
@@ -1254,7 +905,7 @@ export function Hompage(){
                             </a>
                             <div id="announcements">
                                 <img
-                                    src="images/announcement.svg"
+                                    src="/images/announcement.svg"
                                     alt="Languages"
                                     className="socials_icon"
                                 />
@@ -1268,7 +919,7 @@ export function Hompage(){
                                 className="socials_icon"
                             >
                                 <img
-                                    src="images/reddit.svg"
+                                    src="/images/reddit.svg"
                                     alt="Reddit icon"
                                     className="reddit-icon"
                                 />
@@ -1278,14 +929,14 @@ export function Hompage(){
                                 aria-label="Instagram"
                                 className="socials_icon"
                             >
-                                <img src="images/ig.svg" className="ig-svg" alt="Instagram" />
+                                <img src="/images/ig.svg" className="ig-svg" alt="Instagram" />
                             </a>
                             <a
                                 href="https://github.com/pancakeswap/"
                                 aria-label="Github"
                                 className="socials_icon"
                             >
-                                <img src="images/github.svg" className="github-svg" alt="github" />
+                                <img src="/images/github.svg" className="github-svg" alt="github" />
                             </a>
                             <a
                                 href="https://discord.gg/pancakeswap"
@@ -1293,7 +944,7 @@ export function Hompage(){
                                 className="socials_icon"
                             >
                                 <img
-                                    src="images/discord.svg"
+                                    src="/images/discord.svg"
                                     alt="discord"
                                     className="discord-svg"
                                 />
@@ -1304,7 +955,7 @@ export function Hompage(){
                                 className="socials_icon"
                             >
                                 <img
-                                    src="images/youtube.svg"
+                                    src="/images/youtube.svg"
                                     alt="youtube"
                                     className="youtube-svg"
                                 />
@@ -1323,7 +974,7 @@ export function Hompage(){
                                             <div className="mooncake">
                                                 <div className="sunshine">
                                                     <img
-                                                        src="images/sunshine.svg"
+                                                        src="/images/sunshine.svg"
                                                         alt="Sun svg"
                                                         className="langs-svg"
                                                     />
@@ -1331,12 +982,12 @@ export function Hompage(){
                                             </div>
                                             <div className="lang-button">
                                                 <img
-                                                    src="images/sunny.svg"
+                                                    src="/images/sunny.svg"
                                                     alt="Sun"
                                                     className="svgtenth"
                                                 />
                                                 <img
-                                                    src="images/moon.svg"
+                                                    src="/images/moon.svg"
                                                     alt="Moon"
                                                     className="svgtenth"
                                                 />
@@ -1347,7 +998,7 @@ export function Hompage(){
                                 <div className="race">
                                     <button className="worldlang">
                                         <img
-                                            src="images/world.svg"
+                                            src="/images/world.svg"
                                             alt="world"
                                             className="langexchange"
                                         />
@@ -1362,7 +1013,7 @@ export function Hompage(){
                                         href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
                                         className="standardPrice"
                                     >
-                                        <img src="images/logo.svg" alt="logo" className="logosvg" />
+                                        <img src="/images/logo.svg" alt="logo" className="logosvg" />
                                         <div className="price">$1.870</div>
                                     </a>
                                 </div>
@@ -1372,7 +1023,7 @@ export function Hompage(){
                                 >
                                     Buy CAKE
                                     <img
-                                        src="images/buycake.svg"
+                                        src="/images/buycake.svg"
                                         className="buycakesvg"
                                         alt="Buy Cake"
                                     />
@@ -1408,44 +1059,13 @@ export function Hompage(){
                 <span className="opt_kids">Voting</span>
                 <span className="opt_kids">Leaderboard</span>
                 <span className="opt_kids" id="blog2">
-      Blog <img src="images/l-arrow.svg" />
+      Blog <img src="/images/l-arrow.svg" />
     </span>
                 <span className="opt_kids" id="docs2">
-      Docs <img src="images/l-arrow.svg" />{" "}
+      Docs <img src="/images/l-arrow.svg" />{" "}
     </span>
             </div>
-            <div id="mbNavbar" className="mbNavbar">
-                <div className="cover">
-      <span className="mbBtns">
-        <img className="mbImgs" src="images/1s.svg" />
-        <span>Trade</span>
-      </span>
-                </div>
-                <div id="earnBtn" className="mbBtns">
-                    {" "}
-                    <img className="mbImgs" src="images/2s.svg" />
-                    <span>Earn</span>
-                </div>
-                <div id="winBtn" className="mbBtns">
-                    {" "}
-                    <img id="trophy" className="mbImgs" src="images/3strophy.svg" />
-                    <span>Win</span>
-                </div>
-                <div id="nftBtn" className="mbBtns">
-                    {" "}
-                    <img className="mbImgs" src="images/4snft.svg" />
-                    <span>NFT</span>
-                </div>
-                <div id="dotsBtn" className="mbBtns">
-      <span>
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-          &nbsp;
-      </span>
-                </div>
-                .
-            </div>
+            <MbNavbar></MbNavbar>
         </>
     )
 

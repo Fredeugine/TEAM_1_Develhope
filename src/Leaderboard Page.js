@@ -2,13 +2,15 @@ import './Leaderboard.css'
 import './styles.css'
 
 import {useEffect} from "react";
-import {Navbar} from "./Hompage";
+import {Navbar} from "./Navbar";
+import {MbNavbar} from "./Navbar";
 export function LeaderboardPage(){
     useEffect(function (){
 
     })
     return(
         <div>
+            <Navbar></Navbar>
             <a href="#" className="page-up" id="pageup">
                 <svg
                     viewBox="0 0 24 24"
@@ -537,48 +539,7 @@ export function LeaderboardPage(){
       Docs <img src="TEAM_1_Develhope_React/src/images/l-arrow.svg" />{" "}
     </span>
                 </div>
-                <div id="mbNavbar" className="mbNavbar">
-                    <div className="cover">
-      <span className="mbBtns">
-        <img
-            className="mbImgs"
-            src="TEAM_1_Develhope_React/src/images/1s.svg"
-        />
-        <span>Trade</span>
-      </span>
-                    </div>
-                    <div id="earnBtn" className="mbBtns">
-                        {" "}
-                        <img className="mbImgs" src="TEAM_1_Develhope_React/src/images/2s.svg" />
-                        <span>Earn</span>
-                    </div>
-                    <div id="winBtn" className="mbBtns">
-                        {" "}
-                        <img
-                            id="trophy"
-                            className="mbImgs"
-                            src="TEAM_1_Develhope_React/src/images/3strophy.svg"
-                        />
-                        <span>Win</span>
-                    </div>
-                    <div id="nftBtn" className="mbBtns">
-                        {" "}
-                        <img
-                            className="mbImgs"
-                            src="TEAM_1_Develhope_React/src/images/4snft.svg"
-                        />
-                        <span>NFT</span>
-                    </div>
-                    <div id="dotsBtn" className="mbBtns">
-      <span>
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-          &nbsp;
-      </span>
-                    </div>
-                    .
-                </div>
+               <MbNavbar></MbNavbar>
             </div>
         </div>
     )

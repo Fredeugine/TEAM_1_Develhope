@@ -139,12 +139,11 @@ export function IFOPage(){
 
             })
         })
-    }, []);
+    },[]);
 
 //IFO SECTION ENDS
     return(
         <>
-
             <a href="#" className="page-up">
                 <svg
                     viewBox="0 0 24 24"

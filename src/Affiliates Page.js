@@ -1,6 +1,7 @@
 import './affiliates.css'
 import {useEffect} from "react";
-import {Navbar} from "./Hompage";
+import {Navbar} from "./Navbar";
+import {MbNavbar} from "./Navbar";
 export function AffiliatesPage(){
     useEffect(function (){
         var toggleHidden1 = document.getElementById("faqtoggle1");
@@ -80,6 +81,7 @@ export function AffiliatesPage(){
     },[])
     return(
         <>
+            <Navbar></Navbar>
             <a href="#" className="page-up" id="pageup">
                 <svg
                     viewBox="0 0 24 24"
@@ -682,48 +684,7 @@ export function AffiliatesPage(){
       Docs <img src="images/l-arrow.svg" />{" "}
     </span>
             </div>
-            <div id="mbNavbar" className="mbNavbar">
-                <div className="cover">
-      <span className="mbBtns">
-        <img
-            className="mbImgs"
-            src="images/1s.svg"
-        />
-        <span>Trade</span>
-      </span>
-                </div>
-                <div id="earnBtn" className="mbBtns">
-                    {" "}
-                    <img className="mbImgs" src="images/2s.svg" />
-                    <span>Earn</span>
-                </div>
-                <div id="winBtn" className="mbBtns">
-                    {" "}
-                    <img
-                        id="trophy"
-                        className="mbImgs"
-                        src="images/3strophy.svg"
-                    />
-                    <span>Win</span>
-                </div>
-                <div id="nftBtn" className="mbBtns">
-                    {" "}
-                    <img
-                        className="mbImgs"
-                        src="images/4snft.svg"
-                    />
-                    <span>NFT</span>
-                </div>
-                <div id="dotsBtn" className="mbBtns">
-      <span>
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-        <span className="cir_dot" />
-          &nbsp;
-      </span>
-                </div>
-                .
-            </div>
+
             <footer>
                 <div id="div10" className="div10">
                     <div className="tenthdiv">
@@ -1028,6 +989,7 @@ export function AffiliatesPage(){
                     </div>
                 </div>
             </footer>
+            <MbNavbar></MbNavbar>
         </>
 
     )

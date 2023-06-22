@@ -454,12 +454,16 @@
     margin-right: 5px;
 }
 .bnb_word {
-    font-size: 12px;
-    line-height: 0.8;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-left: 5px;
 }
 .btn_cwallect {
-    font-size: 12px;
-    line-height: 0.8;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.03rem;
+    font-weight: 600;
 }
 .bluebutton {
     display: flex;

@@ -3,20 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {IFOPage} from "./IFO Page";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />,
-      <Router>
-          <Routes>
-          <Route exact path="Homepage" component={<App/>} />
-          <Route path="/ifoPage" component={<IFOPage/>} />
-          </Routes>
-      </Router>
-  </React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
