@@ -1,9 +1,11 @@
 import './Swap'
 import './styles.css'
-import {Navbar} from "./Hompage";
+import {Navbar} from "./Navbar";
+import {MbNavbar} from "./Navbar";
 export function SwapPage(){
     return(
         <>
+            <Navbar></Navbar>
             <a href="#" className="page-up">
                 <svg
                     viewBox="0 0 24 24"
@@ -395,6 +397,7 @@ export function SwapPage(){
                     <div className="endlogo" />
                 </div>
             </footer>
+            <MbNavbar></MbNavbar>
         </>
 
     )

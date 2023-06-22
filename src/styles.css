@@ -82,6 +82,8 @@ body {
     }
     .btn_cwallect{
         width: 17%;
+        font-size: 13.8px !important;
+
     }
     #sep2, #sec3, #sec4 {
         align-items: center;
@@ -116,6 +118,7 @@ body {
 
     }
 }
+
 body{
     width: 100%;
 }
@@ -163,7 +166,7 @@ body{
     justify-content: space-between;
     background-color: #27262c;
     border-top: 1px solid #383241;
-    z-index: 20;
+    z-index: 202093790173204971420;
     padding: 5px;
     height: 40px
 }
@@ -279,14 +282,6 @@ body{
 
 }
 
-@media screen and (max-width: 1130px) {
-
-    .btn_cwallect {
-        font-size: 0.97rem;
-    }
-}
-
-
 
 @media screen and (max-width: 851px) {
     #btn_trade, #btn_earn, #btn_trade, #btn_nft, #btn_win, #div_cir_dot {
@@ -322,7 +317,7 @@ body{
     height: 48px;
     display: inline-flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 15px;
     border-left: none ;
     border-right: none;
 }
@@ -336,6 +331,9 @@ body{
 }
 #oo> .opt_kids:hover{
     background-color: transparent;
+}
+#sln{
+    border-bottom: 1px solid #383241;
 }
 #oo:hover,#farms:hover,#tr:hover,#ovr:hover,#info:hover,#sln:hover{
     border-top-left-radius: 0.5rem;
@@ -352,18 +350,22 @@ body{
 
 .options {
     visibility: hidden;
-    background-color: #27262c;
-    padding: 5px 0;
     display: flex;
     flex-direction: column;
     gap: 0;
     width: 15.6rem;
     height: auto;
-    border-radius: 1.2rem;
     color: #b8add2;
     z-index: 5;
     margin-left: -30px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: #27262c;
     border: 1px solid #383241;
+    border-radius: 16px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 #o,#oo,#ooo,#ifo{
     height: 48px;
@@ -409,6 +411,10 @@ body{
     position: absolute;
     top: 2.6rem;
     left: -2rem;
+    border: 1px solid #383241;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /* Style the select tag */
@@ -826,10 +832,8 @@ body{
 }
 
 #img_globe:hover, #img_settings:hover, #div_bnb:hover, .btn_cwallect:hover, .btn_cwallect2:hover, .btn_trade_now:hover {
-    opacity: 80%;
+    opacity: 0.7;
     cursor: pointer;
-    transition-delay: 40ms;
-    transition: ease-in-out;
 
 }
 #00,.opt_kids{
@@ -839,7 +843,6 @@ body{
 
 .buttons {
     color: #b8add2;
-    font-weight: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -847,7 +850,8 @@ body{
     position: relative;
     background: none;
     width: 3rem;
-    font-size: 1.1rem;
+    font-size: 16px ;
+    font-weight: 400;
 }
 
 .scale_borders {
@@ -878,6 +882,7 @@ body{
     display: flex;
     gap: 1.5rem;
     left: 200px;
+
 
 }
 
@@ -1022,6 +1027,31 @@ body{
     z-index: 0;
     overflow-x: visible;
     overflow-y: visible;
+}
+#bnbsc{
+    color: #9a6aff;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+#apt{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    color: #f4eeff;
+}
+#apt2{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    color: #f4eeff;
+}
+.eth{
+    width: 24px;
+    height: 24px;
 }
 
 .bigRock {
@@ -3898,9 +3928,6 @@ html::-webkit-scrollbar-track {
     flex-direction: column;
     height: 100%;
     gap: 10px;
-}
-#options6{
-
 }
 
 #options7 {
