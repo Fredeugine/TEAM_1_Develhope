@@ -1,9 +1,10 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 import './styles.css'
-import { Link, Route, Routes } from "react-router-dom";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {MbNavbar, Navbar} from "./Navbar";
 import {Aptos_Page} from "./Aptos_Page";
 import {IFOPage} from "./IFO Page";
+
 
 
 export function Hompage(){
@@ -23,12 +24,20 @@ export function Hompage(){
         //     }
         // })
     }, [])
+    function blue() {
+        return (
+            <>
+
+            </>
+        )
+    }
+    blue()
     return(
         <>
             <Routes>
+                {/* eslint-disable-next-line react/jsx-pascal-case */}
                 <Route path="/Aptos" element={<Aptos_Page></Aptos_Page>}></Route>
                 <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>
-
             </Routes>
             <Navbar></Navbar>
             <a href="#" className="page-up">
