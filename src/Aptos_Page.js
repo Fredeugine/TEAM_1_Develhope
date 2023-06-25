@@ -2,6 +2,8 @@ import {MbNavbar, Navbar} from "./Navbar";
 import './styles.css'
 import './Aptos.css'
 import React, {useEffect, useLayoutEffect, useState} from "react";
+import {Route, Routes} from "react-router-dom";
+import {IFOPage} from "./IFO Page";
 export function Aptos_Page(){
     // useEffect(function (){
     //     var prevScrollPos = window.pageYOffset;
@@ -25,10 +27,11 @@ export function Aptos_Page(){
     // })
     return(
         <>
+
             <body>
+
                 <header>
                     <Navbar></Navbar>
-
                     <div className={'bar2'}>
                         <span className={'swap'}>Swap <span className={'lb'}></span></span>
                         <span className={'liqui'}>Liquidity</span>
@@ -61,7 +64,7 @@ export function Aptos_Page(){
                                     <span className={'crr'}><img className={'cpy'} src={'/images/copy.svg'}/> <img src={'/images/brr.svg'}/></span>
                                 </div>
                                 <div className={'rocar'}>
-                                    <input defaultValue={'sdfsdf'} type={'text'}/>
+                                    <input defaultValue={'0'} type={'text'}/>
                                 </div>
                             </div>
 
@@ -90,10 +93,249 @@ export function Aptos_Page(){
                 </footer>
 
             </div>
+                <div className={'ovrl'}>
+                    <div className={'tkSelectDiv'}>
+                        <div className={'sat'}>
+                            <span>Select a Token</span>
+                            <img src={'/images/x.svg'} />
+                        </div>
+                        <div className={'SDInn'}>
+                            <input className={'rocar'} placeholder={'Search name or paste address'} type={'search'}/>
+                            <span>Common bases</span>
+
+                            <div className={'flr'}>
+                                <div className={'crv'}>
+                                    <img className={'aptt'} src={'/images/apt.png'}/>
+                                    <span>APT</span>
+                                </div>
+                                <div className={'crv'}>
+                                    <img className={'aptt'} src={'/images/Aptos/0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa__asset__USDC (1).png'}/>
+                                    <span>lUSDC</span>
+                                </div> <div className={'crv'}>
+                                    <img className={'aptt'} src={'/images/7186.png'}/>
+                                    <span>CAKE</span>
+                                </div> <div className={'crv'}>
+                                    <img className={'aptt'} src={'/images/Aptos/bnb.png'}/>
+                                    <span>ceBNB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className={'oga'}>
+                                <div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div><div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </body>
-
-
-
         </>
     )
 

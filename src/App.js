@@ -8,7 +8,8 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive'
 import {AffiliatesPage} from "./Affiliates Page";
 import {Aptos_Page} from "./Aptos_Page";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
 
 
 
@@ -16,8 +17,7 @@ function App() {
 
   return (
       <div>
-
-     <Hompage></Hompage>
+     <Hompage> </Hompage>
       </div>
 
   )
