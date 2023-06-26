@@ -2,6 +2,7 @@ import './affiliates.css'
 import {useEffect} from "react";
 import {Navbar} from "./Navbar";
 import {MbNavbar} from "./Navbar";
+
 export function AffiliatesPage(){
     useEffect(function (){
         var toggleHidden1 = document.getElementById("faqtoggle1");

@@ -2,7 +2,9 @@ import './Swap'
 import './styles.css'
 import {Navbar} from "./Navbar";
 import {MbNavbar} from "./Navbar";
-export function SwapPage(){
+
+
+export default function Swap(){
     return(
         <>
             <Navbar></Navbar>

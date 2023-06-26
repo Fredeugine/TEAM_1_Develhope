@@ -34,12 +34,7 @@ export function Homepage(){
     blue()
     return(
         <>
-            <Routes>
-                {/* eslint-disable-next-line react/jsx-pascal-case */}
-                <Route path="/Aptos" element={<Aptos_Page></Aptos_Page>}></Route>
-                <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>
-            </Routes>
-            <Navbar></Navbar>
+            
             <a href="#" className="page-up">
                 <svg
                     viewBox="0 0 24 24"
