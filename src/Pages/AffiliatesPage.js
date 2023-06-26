@@ -1,7 +1,7 @@
 import './affiliates.css'
 import {useEffect} from "react";
-import {Navbar} from "./Navbar";
-import {MbNavbar} from "./Navbar";
+import {Navbar} from "../Navbar";
+import {MbNavbar} from "../Navbar";
 
 export function AffiliatesPage(){
     useEffect(function (){

@@ -13,7 +13,7 @@ import {Homepage} from "./Homepage";
 import {LeaderboardPage} from "./Leaderboard Page";
 import {IFOPage} from "./IFO Page";
 import Swap from "./Swap";
-import {AffiliatesPage} from "./AffiliatesPage";
+import {AffiliatesPage} from "./Pages/AffiliatesPage";
 import {Aptos_Page} from "./Aptos_Page";
 
 
