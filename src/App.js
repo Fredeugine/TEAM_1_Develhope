@@ -17,21 +17,19 @@ import {AffiliatesPage} from "./Pages/AffiliatesPage";
 import {Aptos_Page} from "./Pages/Aptos_Page";
 
 function App() {
-
   return (
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Homepage />}></Route>
-          <Route path="/Affiliates" element={<AffiliatesPage />}></Route>
-          <Route path="/Aptos" element={<Aptos_Page />}></Route>
-          <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>          
-          <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>
-          <Route path="/Swap" element={<Swap />}></Route>
-        </Routes>
-        <MbNavbar />      
-      </div>
-
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/Affiliates" element={<AffiliatesPage />}></Route>
+        <Route path="/Aptos" element={<Aptos_Page />}></Route>
+        <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>          
+        <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>          
+        <Route path="/Swap" element={<Swap />}></Route>
+      </Routes>
+      <MbNavbar />      
+    </div>
   )
 }
 
