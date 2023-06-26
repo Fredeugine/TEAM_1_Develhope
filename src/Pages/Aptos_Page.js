@@ -1,6 +1,6 @@
-import {MbNavbar, Navbar} from "./Navbar";
-import './styles.css'
-import './Aptos.css'
+import {MbNavbar, Navbar} from "../Components/Navbar";
+import '../Styles/styles.css'
+import '../Styles/Aptos.css'
 import React, {useEffect, useLayoutEffect, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {IFOPage} from "./IFO Page";

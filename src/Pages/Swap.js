@@ -1,8 +1,6 @@
-import './Swap'
-import './styles.css'
-import {Navbar} from "./Navbar";
-import {MbNavbar} from "./Navbar";
-
+import '../Styles/Swap'
+import '../Styles/styles.css'
+import {Navbar, MbNavbar} from "../Components/Navbar";
 
 export default function Swap(){
     return(

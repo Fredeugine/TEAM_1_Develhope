@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {IFOPage} from "./IFO Page";
-import {Aptos_Page} from "./Aptos_Page";
+import {IFOPage} from "./Pages/IFO Page";
+import {Aptos_Page} from "./Pages/Aptos_Page";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

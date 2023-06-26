@@ -1,20 +1,20 @@
 // styles
-import './styles.css';
-import './Ifo.css';
+import './Styles/styles.css';
+import './Styles/Ifo.css';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { useMediaQuery } from 'react-responsive'
 
 // Layouts
-import {MbNavbar, Navbar} from "./Navbar";
+import {MbNavbar, Navbar} from "./Components/Navbar";
 
 // Pages
-import {Homepage} from "./Homepage";
-import {LeaderboardPage} from "./Leaderboard Page";
-import {IFOPage} from "./IFO Page";
-import Swap from "./Swap";
+import {Homepage} from "./Pages/Homepage";
+import {LeaderboardPage} from "./Pages/Leaderboard Page";
+import {IFOPage} from "./Pages/IFO Page";
+import Swap from "./Pages/Swap";
 import {AffiliatesPage} from "./Pages/AffiliatesPage";
-import {Aptos_Page} from "./Aptos_Page";
+import {Aptos_Page} from "./Pages/Aptos_Page";
 
 
 
@@ -31,8 +31,6 @@ function App() {
           <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>          
           <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>
           <Route path="/Swap" element={<Swap />}></Route>
-          
-
         </Routes>
         <MbNavbar />      
       </div>

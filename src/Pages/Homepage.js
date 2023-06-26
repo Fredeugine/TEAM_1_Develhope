@@ -1,7 +1,7 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
-import './styles.css'
+import '../Styles/styles.css'
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
-import {MbNavbar, Navbar} from "./Navbar";
+import {MbNavbar, Navbar} from "../Components/Navbar";
 import {Aptos_Page} from "./Aptos_Page";
 import {IFOPage} from "./IFO Page";
 
