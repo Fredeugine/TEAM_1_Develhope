@@ -223,11 +223,11 @@
     cursor: pointer;
     background-color: #372f47;
 }
-.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt{
+.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt,.mnt{
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
     cursor: pointer;
 }
-.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover{
+.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover,.mnt:hover{
     opacity: 0.7;
 }
 .switchBtn:hover {
@@ -364,17 +364,15 @@ footer{
     color: white;
     width: 100%;
     max-width: 396px;
-    max-height: 678px;
     min-width: 320px;
     animation: 0.3s ease-in-out 0s 1 normal forwards running tkSelect;
-    overflow: hidden;
     background: #27262c;
     box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px, rgba(0, 0, 0, 0.05) 0px 1px 1px;
     border: 1px solid #383241;
     border-radius: 32px;
     z-index: 100;
     position: fixed;
-    top:10%;
+    top: 10%;
     left: 30%;
     transform: translate(-50%, -50%);
 }
@@ -396,17 +394,24 @@ footer{
     font-weight: 600;
     line-height: 1.1;
      border-bottom: 1px solid #383241;
-    height: 72.8px;
-     padding: 3px 24px 0 24px;
+    height: 65.8px;
+     padding: 0px 18px 0 18px;
 }
 .SDInn{
     width: 100%;
     padding: 12px;
-    border: 1px solid red;
     max-width: 370px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 10px;
+    justify-content: flex-start;
+
+
+}
+.SDInn > span{
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
 }
 .SDInn > .rocar{
     width: 100%;
@@ -441,11 +446,11 @@ footer{
     max-width: 350px;
     justify-content: space-between;
     align-items: center;
-    padding-left: 18px;
-    padding-right: 18px;
 
 }
-
+.oga > .flr{
+    padding-left: 18px;
+}
 .oga > .flr:hover{
     background-color: #08060b;
     cursor: pointer;
@@ -453,24 +458,24 @@ footer{
 .rww{
     display: flex;
     flex-direction: column;
-    height: 45px;
+    height: 41px;
 }
 .bl{
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15.8px;
     line-height: 24px;
     color:  #f4eeff;
 }
 .bl2{
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13.8px;
     line-height: 21px;
     color: #b8add2;
 }
 .tr{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3.4px;
 }
 .zero{
     font-weight: 400;
@@ -478,17 +483,40 @@ footer{
     line-height: 24px;
     color: #f4eeff;
 }
+.oga2{
+    max-height: 390px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: -14px;
+}
 .oga{
     display: flex;
     flex-direction: column;
-    overflow: auto;
     max-height: 390px;
-    gap: 5px;
+    height: 100%;
+    gap: 3px;
     padding-top: 18px;
     padding-bottom: 18px;
+    overflow: auto;
 }
 .oga::-webkit-scrollbar {
     width: 8px; /* Adjust as needed */
+}
+.mnt{
+    width: 100%;
+    height: 60px;
+    color: #1fc7d4;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+
 }
 
 
