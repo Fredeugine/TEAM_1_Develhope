@@ -171,9 +171,11 @@ export function Navbar() {
           <Link to={"/"}>
             <img className="imgs" id="img_beer" src="/images/beer.svg" />
           </Link>
-          <span className="ps_word" id="ps_word">
-            PancakeSwap
-          </span>
+          <Link to={"/"}>
+            <span className="ps_word" id="ps_word">
+              PancakeSwap
+            </span>
+          </Link>
         </div>
         <div id="sec_2" className="sec_2">
           <div id="TradeDiv1" className="TradeDiv">

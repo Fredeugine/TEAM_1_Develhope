@@ -15,6 +15,7 @@ import { IFOPage } from "./Pages/IFO Page";
 import Swap from "./Pages/Swap";
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>
         <Route path="/Swap" element={<Swap />}></Route>
       </Routes>
+      <Footer></Footer>
       <MbNavbar />
     </div>
   );
