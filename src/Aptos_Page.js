@@ -121,8 +121,18 @@ export function Aptos_Page(){
                             </div>
                         </div>
 
-                        <div>
+                        <div className={'oga2'}>
                             <div className={'oga'}>
+                                <div className={'flr'}>
+                                    <div className={'tr'}>
+                                        <img className={'aptt'} src={'/images/apt.png'}/>
+                                        <div className={'rww'}>
+                                            <span className={'bl'}>APT</span>
+                                            <span className={'bl2'}>Aptos Coin</span>
+                                        </div>
+                                    </div>
+                                    <span className={'zero'}>0</span>
+                                </div>
                                 <div className={'flr'}>
                                     <div className={'tr'}>
                                         <img className={'aptt'} src={'/images/apt.png'}/>
@@ -312,16 +322,8 @@ export function Aptos_Page(){
                                         </div>
                                     </div>
                                     <span className={'zero'}>0</span>
-                                </div><div className={'flr'}>
-                                    <div className={'tr'}>
-                                        <img className={'aptt'} src={'/images/apt.png'}/>
-                                        <div className={'rww'}>
-                                            <span className={'bl'}>APT</span>
-                                            <span className={'bl2'}>Aptos Coin</span>
-                                        </div>
-                                    </div>
-                                    <span className={'zero'}>0</span>
-                                </div><div className={'flr'}>
+                                </div>
+                                <div className={'flr'}>
                                     <div className={'tr'}>
                                         <img className={'aptt'} src={'/images/apt.png'}/>
                                         <div className={'rww'}>
@@ -333,6 +335,7 @@ export function Aptos_Page(){
                                 </div>
                             </div>
                         </div>
+                        <span className={'mnt'}>Manage Tokens</span>
                     </div>
                 </div>
             </body>
