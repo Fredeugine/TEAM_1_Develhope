@@ -37,9 +37,18 @@ function App() {
               }}
             >
               {/* <img src="/images/beer.svg"></img> */}
-              <h1 style={{ marginTop: "450px", fontSize: "72px" }}>404</h1>
+              <h1
+                style={{
+                  marginTop: "450px",
+                  fontSize: "72px",
+                }}
+              >
+                404
+              </h1>
               <p style={{ fontWeight: "600" }}>Oops, page not found.</p>
-              <Link to={"/"}>Back Home</Link>
+              <Link to={"/"} style={{ marginBottom: "450px" }}>
+                Back Home
+              </Link>
             </div>
           }
         ></Route>
