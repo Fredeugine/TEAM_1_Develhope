@@ -3,7 +3,7 @@ import './Styles/styles.css';
 import './Styles/Ifo.css';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 // Layouts
 import {MbNavbar, Navbar} from "./Components/Navbar";
@@ -15,9 +15,6 @@ import {IFOPage} from "./Pages/IFO Page";
 import Swap from "./Pages/Swap";
 import {AffiliatesPage} from "./Pages/AffiliatesPage";
 import {Aptos_Page} from "./Pages/Aptos_Page";
-
-
-
 
 function App() {
 
