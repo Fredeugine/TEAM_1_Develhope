@@ -1,7 +1,7 @@
 import './Ifo.css'
 import './styles.css';
 import {useEffect} from "react";
-import {Navbar} from "./Hompage";
+import {Navbar} from "./Homepage";
 export function IFOPage(){
     useEffect(() => {
         const btnDetails = document.querySelectorAll('.btnDetails')

@@ -7,7 +7,7 @@ import {IFOPage} from "./IFO Page";
 
 
 
-export function Hompage(){
+export function Homepage(){
     useEffect(() => {
 
 

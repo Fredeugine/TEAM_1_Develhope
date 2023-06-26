@@ -1,6 +1,6 @@
 import './styles.css';
 import './Ifo.css'
-import {Hompage, Navbar} from "./Hompage";
+import {Homepage, Navbar} from "./Homepage";
 import {LeaderboardPage} from "./Leaderboard Page";
 import {IFOPage} from "./IFO Page";
 import {SwapPage} from "./Swap Page";
@@ -17,7 +17,7 @@ function App() {
 
   return (
       <div>
-     <Hompage> </Hompage>
+     <Homepage> </Homepage>
       </div>
 
   )
