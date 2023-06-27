@@ -114,9 +114,6 @@ body {
         height: 70%;
     }
 
-    #img_bnb {
-
-    }
 }
 
 body{
@@ -168,12 +165,8 @@ body{
     border-top: 1px solid #383241;
     z-index: 202093790173204971420;
     padding: 5px;
+    padding-left: 32px;
     height: 40px
-}
-@media screen and (max-width: 390px) {
-    #mbNavbar{
-
-    }
 }
 
 .mbImgs {
@@ -566,9 +559,6 @@ body{
 
     }
 
-    .bottom_stars {
-
-    }
 }
 
 .img_astronaut {
@@ -2280,10 +2270,6 @@ body {
         height: 250px;
     }
 
-    #div7h1 {
-
-    }
-
 }
 
 .div72cards {
@@ -3438,6 +3424,7 @@ a {
     border-bottom: 1px solid #383241;
     display: flex;
     gap: 2rem;
+    padding-bottom: 16px;
 }
 
 .socials_icon {
@@ -3455,8 +3442,6 @@ a {
     fill: #f4eeff;
 }
 
-#announcements {
-}
 
 .div10 .langs {
     width: max-content;
@@ -3464,7 +3449,6 @@ a {
     flex-direction: column;
     position: absolute;
     background-color: #27262c;
-    padding: 16px;
     overflow: hidden;
     z-index: 10;
     border-radius: 4px;
@@ -3487,9 +3471,6 @@ a {
     display: block;
 }
 
-.theme {
-
-}
 
 .langs {
     transform: translate(0px);
@@ -3535,6 +3516,7 @@ a {
     border-top-width: 1px;
     border-bottom-width: 1px;
     padding: 24px 0px;
+    margin-top: 16px;
     margin-bottom: 24px;
     order: 1;
     flex-direction: column;
@@ -3546,8 +3528,6 @@ a {
         border-bottom-width: 0px;
         padding: 0px;
         margin-bottom: 0px;
-        border-color: #383241;
-        border-style: solid;
         order: 3;
         flex-direction: row;
         display: flex;
@@ -3669,6 +3649,7 @@ a {
 .race {
     position: relative;
     display: block;
+    margin-left: 10px;
 }
 
 .worldlang {
@@ -4000,4 +3981,33 @@ html::-webkit-scrollbar-track {
     background-color: inherit;
 }
 
+@media screen and (max-width: 1200px) {
+  .tenthdiv {
+    width: inherit;
+  }
+  .trade-box1 {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .buycake {
+    margin-top: 20px;
+  }
+  .iconpage {
+    margin-top: 24px;
+  }
+  .pancklogo {
+    margin-top: 16px;
+  }
+  .tenthdiv {
+    padding: 32px;
+  }
+  .worldlang {
+    display: none;
+  }
+  .theme2 {
+    margin-bottom: 24px;
+  }
+}
 

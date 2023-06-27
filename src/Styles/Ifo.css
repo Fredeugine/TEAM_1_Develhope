@@ -3,7 +3,7 @@
 }
 
 .ifoSec1 {
-    background-image: url("../public/images/Ifo-images/ifo-banner-dark.png");
+    /* background-image: url("./public/images/Ifo-images/ifo-banner-dark.png"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,9 +1,8 @@
-import './Leaderboard.css'
-import './styles.css'
+import '../Styles/Leaderboard.css'
+import '../Styles/styles.css'
 
 import {useEffect} from "react";
-import {Navbar} from "./Navbar";
-import {MbNavbar} from "./Navbar";
+import {Navbar, MbNavbar} from "../Components/Navbar";
 export function LeaderboardPage(){
     useEffect(function (){
 
