@@ -5,7 +5,7 @@ import React, {useEffect, useLayoutEffect, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {IFOPage} from "./IFO Page";
 export function Aptos_Page(){
-    // useEffect(function (){
+    useEffect(function (){
     //     var prevScrollPos = window.pageYOffset;
     //     window.onscroll = function() {
     //         var currentScrollPos = window.pageYOffset;
@@ -24,14 +24,23 @@ export function Aptos_Page(){
     //
     //         prevScrollPos = currentScrollPos;
     //     };
-    // })
+        const closeBtn = document.querySelector('.closex')
+        const ChooseSAT = document.querySelectorAll('.crd2Inn1')
+        const SATPage = document.querySelector('.ovrl')
+        closeBtn.addEventListener('click',function (){
+            SATPage.style.display = 'none'
+        })
+        ChooseSAT[1].addEventListener('click',function (){
+            SATPage.style.display = 'flex'
+        })
+    },[])
+
     return(
         <>
 
             <body>
 
                 <header>
-                    <Navbar></Navbar>
                     <div className={'bar2'}>
                         <span className={'swap'}>Swap <span className={'lb'}></span></span>
                         <span className={'liqui'}>Liquidity</span>
@@ -51,9 +60,7 @@ export function Aptos_Page(){
                                     <span className={'crd2Inn1'}><span><img className={'aptt'} src={'/images/apt.png'}/></span>APT<span><img id={'drr2'} className='darr' src='/images/down_arrow.svg'/></span></span>
                                     <span><img className={'cpy'} src={'/images/copy.svg'}/></span>
                                 </div>
-                                <div className={'rocar'}>
-                                    <input defaultValue={'sdfsdf'} type={'text'}/>
-                                </div>
+                                <input className={'rin'} defaultValue={'sdfsdf'} type={'text'}/>
                             </div>
 
                             <div className={'switchBtn'}><img src={'/images/btm.svg'}/></div>
@@ -63,9 +70,7 @@ export function Aptos_Page(){
                                     <span className={'crd2Inn1'}><span><img className={'aptt2'} src={'/images/7186.png'}/></span> <span>CAKE</span> <span><img id={'drr'} className='darr' src='/images/down_arrow.svg'/></span></span>
                                     <span className={'crr'}><img className={'cpy'} src={'/images/copy.svg'}/> <img src={'/images/brr.svg'}/></span>
                                 </div>
-                                <div className={'rocar'}>
-                                    <input defaultValue={'0'} type={'text'}/>
-                                </div>
+                                    <input className={'rin'} defaultValue={'0'} type={'text'}/>
                             </div>
 
                             <div className={'slip'}>
@@ -97,10 +102,10 @@ export function Aptos_Page(){
                     <div className={'tkSelectDiv'}>
                         <div className={'sat'}>
                             <span>Select a Token</span>
-                            <img src={'/images/x.svg'} />
+                            <img className={'closex'} src={'/images/x.svg'} />
                         </div>
                         <div className={'SDInn'}>
-                            <input className={'rocar'} placeholder={'Search name or paste address'} type={'search'}/>
+                            <input className={'rin'} placeholder={'Search name or paste address'} type={'search'}/>
                             <span>Common bases</span>
 
                             <div className={'flr'}>
