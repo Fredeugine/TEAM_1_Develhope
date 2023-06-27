@@ -165,6 +165,7 @@ body{
     border-top: 1px solid #383241;
     z-index: 202093790173204971420;
     padding: 5px;
+    padding-left: 32px;
     height: 40px
 }
 
@@ -3989,4 +3990,24 @@ html::-webkit-scrollbar-track {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .buycake {
+    margin-top: 20px;
+  }
+  .iconpage {
+    margin-top: 24px;
+  }
+  .pancklogo {
+    margin-top: 16px;
+  }
+  .tenthdiv {
+    padding: 32px;
+  }
+  .worldlang {
+    display: none;
+  }
+  .theme2 {
+    margin-bottom: 24px;
+  }
+}
 
