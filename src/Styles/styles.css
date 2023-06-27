@@ -114,9 +114,6 @@ body {
         height: 70%;
     }
 
-    #img_bnb {
-
-    }
 }
 
 body{
@@ -169,11 +166,6 @@ body{
     z-index: 202093790173204971420;
     padding: 5px;
     height: 40px
-}
-@media screen and (max-width: 390px) {
-    #mbNavbar{
-
-    }
 }
 
 .mbImgs {
@@ -566,9 +558,6 @@ body{
 
     }
 
-    .bottom_stars {
-
-    }
 }
 
 .img_astronaut {
@@ -2278,10 +2267,6 @@ body {
     #div7ball6, #div7ball9, #div7ball4, #div7ball7, #div7greencard, #div7bluecard, #div7redcard, #div7greenbottomcard {
         width: 250px;
         height: 250px;
-    }
-
-    #div7h1 {
-
     }
 
 }
