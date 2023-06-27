@@ -3438,6 +3438,7 @@ a {
     border-bottom: 1px solid #383241;
     display: flex;
     gap: 2rem;
+    padding-bottom: 16px;
 }
 
 .socials_icon {
@@ -3455,8 +3456,6 @@ a {
     fill: #f4eeff;
 }
 
-#announcements {
-}
 
 .div10 .langs {
     width: max-content;
@@ -3464,7 +3463,6 @@ a {
     flex-direction: column;
     position: absolute;
     background-color: #27262c;
-    padding: 16px;
     overflow: hidden;
     z-index: 10;
     border-radius: 4px;
@@ -3487,9 +3485,6 @@ a {
     display: block;
 }
 
-.theme {
-
-}
 
 .langs {
     transform: translate(0px);
@@ -3535,6 +3530,7 @@ a {
     border-top-width: 1px;
     border-bottom-width: 1px;
     padding: 24px 0px;
+    margin-top: 16px;
     margin-bottom: 24px;
     order: 1;
     flex-direction: column;
@@ -3546,8 +3542,6 @@ a {
         border-bottom-width: 0px;
         padding: 0px;
         margin-bottom: 0px;
-        border-color: #383241;
-        border-style: solid;
         order: 3;
         flex-direction: row;
         display: flex;
@@ -3669,6 +3663,7 @@ a {
 .race {
     position: relative;
     display: block;
+    margin-left: 10px;
 }
 
 .worldlang {
@@ -3998,6 +3993,15 @@ html::-webkit-scrollbar-track {
 #options72::-webkit-scrollbar-track {
     border-radius: 3px;
     background-color: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+  .tenthdiv {
+    width: inherit;
+  }
+  .trade-box1 {
+    overflow: hidden;
+  }
 }
 
 

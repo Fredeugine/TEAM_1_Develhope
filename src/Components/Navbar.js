@@ -1,22 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const visibleTable = document.querySelector(".div6_visible");
-const hiddenTable = document.querySelector(".div6_hidden");
-const switchButton = document.querySelector(".div6_switch");
-const title = document.querySelector(".d6farms");
-
-function switchTable() {
-  if (visibleTable.style.display === "none") {
-    visibleTable.style.display = "grid";
-    hiddenTable.style.display = "none";
-    title.textContent = "Farms";
-  } else {
-    visibleTable.style.display = "none";
-    hiddenTable.style.display = "grid";
-    title.textContent = "Syrup Pools";
-  }
-}
 export function Navbar() {
   useEffect(() => {
     const bnbText = document.getElementById("bnb_word");
@@ -158,10 +142,6 @@ export function Navbar() {
         remove();
       });
     });
-  }, []);
-
-  useEffect(() => {
-    // switchButton.addEventListener("click", switchTable); //uncomment this
   }, []);
 
   return (
