@@ -41,7 +41,6 @@ export function Aptos_Page(){
             <body>
 
                 <header>
-                    <Navbar></Navbar>
                     <div className={'bar2'}>
                         <span className={'swap'}>Swap <span className={'lb'}></span></span>
                         <span className={'liqui'}>Liquidity</span>
