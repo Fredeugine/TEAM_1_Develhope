@@ -1,5 +1,4 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import "../Styles/styles.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { MbNavbar, Navbar } from "../Components/Navbar";
 import { Aptos_Page } from "./Aptos_Page";

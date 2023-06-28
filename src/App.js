@@ -1,5 +1,4 @@
 // styles
-import "./Styles/styles.css";
 import "./Styles/Ifo.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
@@ -16,6 +15,8 @@ import Swap from "./Pages/Swap";
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
 import Footer from "./Components/Footer";
+
+let darkPref = localStorage.getItem("darkMode");
 
 function App() {
   return (

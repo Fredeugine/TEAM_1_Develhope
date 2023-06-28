@@ -300,6 +300,25 @@ export default function Footer() {
                   alt="Buy Cake"
                 />
               </a>
+              <button
+                onClick={() => {
+                  localStorage.setItem("TYPE_OF_THEME", JSON.stringify("dark"));
+                  window.location.reload(false);
+                }}
+              >
+                Dark
+              </button>
+              <button
+                onClick={() => {
+                  localStorage.setItem(
+                    "TYPE_OF_THEME",
+                    JSON.stringify("light")
+                  );
+                  window.location.reload(false);
+                }}
+              >
+                Light
+              </button>
             </div>
           </div>
         </div>
