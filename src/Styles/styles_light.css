@@ -1375,7 +1375,7 @@ body {
 }
 
 .div4_parent_container {
-    background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+    background: linear-gradient(180deg,#fff 22%,#d7caec 100%);
     padding-top: 48px;
     padding-bottom: 48px;
     margin: 0px;
@@ -1408,7 +1408,7 @@ body {
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;
-    color: #F4EEFF;
+    color: #280d5f;
     text-align: center;
     margin: 0px;
 }
@@ -1416,7 +1416,7 @@ body {
 #div4_text2 {
     font-size: 40px;
     font-weight: 600;
-    color: #F4EEFF;
+    color: #280d5f;
     margin: 0px 0px 32px;
     line-height: 1.1;
     text-align: center;
@@ -1425,7 +1425,7 @@ body {
 #div4_text3 {
     font-size: 16px;
     font-weight: 400;
-    color: #b8add2;
+    color: #7a6eaa;
     line-height: 1.5;
     text-align: center;
     vertical-align: baseline;
@@ -1434,7 +1434,7 @@ body {
 #div4_text4 {
     font-size: 16px;
     font-weight: 400;
-    color: #b8add2;
+    color: #7a6eaa;
     margin: 0px 0px 20px;
     line-height: 1.5;
     text-align: center;
@@ -1446,7 +1446,7 @@ body {
 #div4_text5 {
     font-size: 16px;
     font-weight: 600;
-    color: #b8add2;
+    color: #7a6eaa;
     margin: 0px 0px 32px;
     line-height: 1.5;
     text-align: center;

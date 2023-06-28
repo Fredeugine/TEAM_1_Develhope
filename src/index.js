@@ -15,7 +15,8 @@ const LightTheme = React.lazy(() => import("./Themes/lightTheme"));
 const DarkTheme = React.lazy(() => import("./Themes/darkTheme"));
 
 const ThemeSelector = ({ children }) => {
-  const CHOSEN_THEME = JSON.parse(localStorage.getItem("TYPE_OF_THEME"));
+  const CHOSEN_THEME =
+    JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
   if (CHOSEN_THEME === "light") {
     return (
       <>
