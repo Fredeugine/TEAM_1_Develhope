@@ -56,7 +56,6 @@
     width: 22px;
 }
 .body{
-    overflow: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,10 +114,10 @@
 }
 .crr{
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
     align-items: center;
     width: 100%;
-    max-width: 123px;
+    max-width: 178px;
     height: 32px;
 }
 
@@ -138,7 +137,26 @@
     line-height: 1.5;
 
 }
+.crd2Inn2{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 88px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.aptt1{
+    width: 24px;
+    margin-right: 5px;
+}
 .aptt{
+    width: 24px;
+    margin-right: 5px;
+}
+.apptm{
     width: 24px;
     margin-right: 5px;
 }
@@ -149,6 +167,7 @@
 .cpy{
     width: 16px;
     height: 16px;
+
 }
 .cpy:hover{
     opacity: 0.6;
@@ -168,18 +187,7 @@
 }
 
 .rocar{
-    position: relative;
-    background-color: #372f47;
-    border-radius: 16px;
-    height: 78px;
-    width: 100%;
-    max-width: 294px;
-    cursor: pointer;
 
-}
-.rocar:active{
-    border: 1px solid rgb(165, 142, 231);
-    outline: 3px solid rgba(138, 92, 239, 0.8);
 }
 .padd{
     display: flex;
@@ -189,26 +197,33 @@
     padding-right: 18px;
     gap: 18px;
 }
-.rocar > input{
+.rin{
+    position: relative;
+    background-color: #372f47;
+    border-radius: 16px;
+    height: 78px;
+    width: 100%;
+    max-width: 294px;
+    cursor: pointer;
+    border: 1px solid #262130;
+    box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
     line-height: 16px;
     font-size: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 12px;
     text-align: right;
     font-weight: 500;
-    background-color: inherit;
-    border: none;
-    height: 24px;
-    position: absolute;
     right: 8px;
-    border-radius: inherit;
     color: #b8add2;
+    outline: none;
 }
-.rocar > input:focus{
-    outline: 0;
-    border: 0;
+.rin:focus{
+    box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118,69,217,.6);
 }
+
+
+
+
+
+
 .switchBtn{
     margin-top: -10px;
     display: inline-flex;
@@ -223,13 +238,15 @@
     cursor: pointer;
     background-color: #372f47;
 }
-.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt,.mnt{
+.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt,.mnt,.sat > img,.crd2Inn1,.crd2Inn2{
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
     cursor: pointer;
 }
-.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover,.mnt:hover{
+.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover,.mnt:hover,.sat > img:hover,.crd2Inn1:hover,.crd2Inn2:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
+
 .switchBtn:hover {
     background-color: #1fc7d4;
 }
@@ -239,7 +256,8 @@
 #crr2 > .crr{
     max-width: 48px;
 }
-#crr2 > .crd2Inn1{
+
+#crr2 > .crd2Inn2{
     max-width: 109px;
 }
 .slip{
@@ -341,6 +359,7 @@ footer{
     align-items: center;
 }
 .ovrl{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -405,21 +424,36 @@ footer{
     flex-direction: column;
     gap: 10px;
     justify-content: flex-start;
-
-
 }
 .SDInn > span{
     font-weight: 400;
     line-height: 1.5;
     font-size: 14px;
 }
-.SDInn > .rocar{
+.SDInn > .rin{
     width: 100%;
     max-width: 370px;
     height: 48px;
     text-align: left;
     position: unset;
-    border: none;
+    border: 1px solid #262130;
+    box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
+    color: #b8add2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.SDInn > .rin:focus{
+    box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118,69,217,.6);
+}
+
+.SDInn > input::placeholder{
+    padding-left: 16px;
+    color: #b8add2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 .crv{
     display: flex;
@@ -440,13 +474,21 @@ footer{
     background-color: #08060b;
     cursor: pointer;
 }
+.flr1{
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
 .flr{
     display: flex;
     width: 100%;
     max-width: 350px;
     justify-content: space-between;
     align-items: center;
-
+    gap: 6px;
 }
 .oga > .flr{
     padding-left: 18px;
