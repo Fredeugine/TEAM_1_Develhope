@@ -259,7 +259,7 @@ export default function Footer() {
                         className="svgtenth"
                       />
                       <img
-                        src="/images/moon.svg"
+                        src="/images/sunny.svg"
                         alt="Moon"
                         className="svgtenth"
                       />
