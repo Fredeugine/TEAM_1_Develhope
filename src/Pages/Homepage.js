@@ -4,6 +4,8 @@ import { MbNavbar, Navbar } from "../Components/Navbar";
 import { Aptos_Page } from "./Aptos_Page";
 import { IFOPage } from "./IFO Page";
 
+let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME"));
+
 export function Homepage() {
   useEffect(() => {
     // toggleButton.addEventListener("click", () => {
@@ -301,11 +303,19 @@ export function Homepage() {
           </div>
         </div>
         <div className="transition_div4_div5">
-          <img
-            alt="transition_div4_div5"
-            className="transition_div4_div5"
-            src="/images/transition_div4_div5.png"
-          />
+          {themePref === "dark" ? (
+            <img
+              alt="transition_div4_div5"
+              className="transition_div4_div5"
+              src="/images/transition_div4_div5.png"
+            />
+          ) : (
+            <img
+              alt="light_transition_div4_div5"
+              className="transition_div4_div5"
+              src="/images/light_transition_div4_div5.png"
+            />
+          )}
         </div>
         <div className="trade_anything">
           <div className="bigger-box">
@@ -361,11 +371,19 @@ export function Homepage() {
           </div>
         </div>
         <div className="transition_div5_div6">
-          <img
-            alt="transition_div5_div6"
-            className="transition_div5_div6"
-            src="/images/transition_div5_div6.png"
-          />
+          {themePref === "dark" ? (
+            <img
+              alt="transition_div5_div6"
+              className="transition_div5_div6"
+              src="/images/transition_div5_div6.png"
+            />
+          ) : (
+            <img
+              alt="light_transition_div5_div6"
+              className="transition_div5_div6"
+              src="/images/light_transition_div5_div6.png"
+            />
+          )}
         </div>
         <div className="div6earnpassive">
           <section id="div6upperpart" className="div6upperpart">
@@ -449,7 +467,7 @@ export function Homepage() {
                 <div id="div6fifthc" className="div6fifthc">
                   <p className="div6line1">CEEK-BNB</p>
                   <p className="aprnumber">63.986%</p>
-                  <p id="aprtext">APR</p>
+                  <p className="aprtext">APR</p>
                 </div>
               </div>
               <div id="div6_hidden" className="div6_hidden">
@@ -515,7 +533,8 @@ export function Homepage() {
                       Play{" "}
                       <svg
                         viewBox="0 0 24 24"
-                        color="invertedContrast"
+                        color="white"
+                        fill="lightgray"
                         width="20px"
                         xmlns="http://www.w3.org/2000/svg"
                         className="sc-231a1e38-0 bmGvXN"
@@ -541,7 +560,8 @@ export function Homepage() {
                       Buy Tickets{" "}
                       <svg
                         viewBox="0 0 24 24"
-                        color="invertedContrast"
+                        color="white"
+                        fill="lightgray"
                         width="20px"
                         xmlns="http://www.w3.org/2000/svg"
                         className="sc-231a1e38-0 bmGvXN"
