@@ -114,10 +114,10 @@
 }
 .crr{
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
     align-items: center;
     width: 100%;
-    max-width: 123px;
+    max-width: 178px;
     height: 32px;
 }
 
@@ -137,7 +137,26 @@
     line-height: 1.5;
 
 }
+.crd2Inn2{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 88px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.aptt1{
+    width: 24px;
+    margin-right: 5px;
+}
 .aptt{
+    width: 24px;
+    margin-right: 5px;
+}
+.apptm{
     width: 24px;
     margin-right: 5px;
 }
@@ -148,6 +167,7 @@
 .cpy{
     width: 16px;
     height: 16px;
+
 }
 .cpy:hover{
     opacity: 0.6;
@@ -218,11 +238,11 @@
     cursor: pointer;
     background-color: #372f47;
 }
-.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt,.mnt,.sat > img,.crd2Inn1{
+.slipwrd > img,.switchBtn,.cpy,.crr > img,.fll,.stt,.mnt,.sat > img,.crd2Inn1,.crd2Inn2{
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
     cursor: pointer;
 }
-.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover,.mnt:hover,.sat > img:hover,.crd2Inn1:hover{
+.slipwrd > img:hover,.switchBtn:hover,.cpy:hover,.crr > img:hover,.fll:hover,.stt:hover,.mnt:hover,.sat > img:hover,.crd2Inn1:hover,.crd2Inn2:hover{
     opacity: 0.7;
     cursor: pointer;
 }
@@ -236,7 +256,8 @@
 #crr2 > .crr{
     max-width: 48px;
 }
-#crr2 > .crd2Inn1{
+
+#crr2 > .crd2Inn2{
     max-width: 109px;
 }
 .slip{
@@ -453,13 +474,21 @@ footer{
     background-color: #08060b;
     cursor: pointer;
 }
+.flr1{
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
 .flr{
     display: flex;
     width: 100%;
     max-width: 350px;
     justify-content: space-between;
     align-items: center;
-
+    gap: 6px;
 }
 .oga > .flr{
     padding-left: 18px;
