@@ -439,7 +439,7 @@ body{
 }
 
 #wavy_line {
-    background: #1d1630;
+    background: linear-gradient(139.73deg,#f4f1fd 0%,#f3efff 100%);
 }
 
 #arrow {

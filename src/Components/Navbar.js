@@ -263,7 +263,7 @@ export function Navbar() {
       <div id="sep2" className="sep2">
         <div className="sec_3" id="sec_3">
           <img className="imgs" id="img_deer2" src="/images/7186.png" />
-          <span className="api-price">$1.234</span>
+          <span className="api-price">$1.870</span>
         </div>
         <div id="sec4" className="sec_4">
           <div id="TradeDiv6" className="TradeDiv2">

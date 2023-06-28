@@ -226,12 +226,22 @@ export function Homepage() {
             width="100%"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient id="gradient" x1={0} x2={1} y1={0} y2={0}>
-                <stop offset="85%" stopColor="#0a080e" />
-                <stop offset="100%" stopColor="#181227" />
-              </linearGradient>
-            </defs>
+            {" "}
+            {themePref === "light" ? (
+              <defs>
+                <linearGradient id="gradient" x1={0} x2={1} y1={0} y2={0}>
+                  <stop offset="100%" stopColor="#fff" />
+                  <stop offset="100%" stopColor="#fff" />
+                </linearGradient>
+              </defs>
+            ) : (
+              <defs>
+                <linearGradient id="gradient" x1={0} x2={1} y1={0} y2={0}>
+                  <stop offset="100%" stopColor="#0a080e" />
+                  <stop offset="100%" stopColor="#181227" />
+                </linearGradient>
+              </defs>
+            )}
             <path
               d="M0 304.5C267.5 290.522 520.5 167.023 804 167.023C1104 167.023 1358.83 0.5 1660 0.5V339H0V304.5Z"
               fill="url(#gradient)"
@@ -303,17 +313,17 @@ export function Homepage() {
           </div>
         </div>
         <div className="transition_div4_div5">
-          {themePref === "dark" ? (
-            <img
-              alt="transition_div4_div5"
-              className="transition_div4_div5"
-              src="/images/transition_div4_div5.png"
-            />
-          ) : (
+          {themePref === "light" ? (
             <img
               alt="light_transition_div4_div5"
               className="transition_div4_div5"
               src="/images/light_transition_div4_div5.png"
+            />
+          ) : (
+            <img
+              alt="transition_div4_div5"
+              className="transition_div4_div5"
+              src="/images/transition_div4_div5.png"
             />
           )}
         </div>
