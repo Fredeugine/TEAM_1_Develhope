@@ -479,7 +479,7 @@ body{
 
 .moon_is_made_of_pancakes {
     display: flex;
-    background-color: #1d1630;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .astro_enclosure1 {
@@ -488,6 +488,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 7%;
+    background-color: rgba(255, 255, 255, 0)
 }
 
 .div3-div4-svg {
@@ -520,7 +521,7 @@ body{
 }
 
 .astro_pa {
-    color: white;
+    color: #280d5f;
     font-size: 1.4rem;
 }
 
@@ -685,7 +686,7 @@ body{
     height: 48px;
     padding: 0 24px;
     background-color: #1fc7d4;
-    color: #191a2d;
+    color: white;
     transition: 0s opacity ease-in-out;
 }
 
@@ -696,7 +697,7 @@ body{
     height: 48px;
     padding: 0 24px;
     color: #1e92a2;
-    background-color: #1c152f;
+    background-color: rgba(255, 255, 255, 0);
     align-items: center;
     justify-content: center;
     display: inline-flex;
@@ -928,6 +929,7 @@ body{
     border: 0;
     box-sizing: border-box;
     display: block;
+    background-color: rgba(240, 255, 255, 0);
 }
 
 .carousel-parent2 {
