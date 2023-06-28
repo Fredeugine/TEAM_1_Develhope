@@ -352,14 +352,14 @@ body{
     gap: 0;
     width: 15.6rem;
     height: auto;
-    color: #b8add2;
+    color: #7a6eaa;
     z-index: 5;
     margin-left: -30px;
     font-weight: 400;
     line-height: 1.5;
     font-size: 16px;
-    background-color: #27262c;
-    border: 1px solid #383241;
+    background-color: #faf9fa;
+    border: 1px solid #b3b3b3;
     border-radius: 16px;
     padding-bottom: 4px;
     padding-top: 4px;
@@ -1466,7 +1466,7 @@ body {
     padding: 1px 1px 4px;
     box-sizing: border-box;
     margin-bottom: 0px;
-    background: #383241;
+    background: #d1d1d1;
     border-radius: 24px;
     color: #f4eeff;
     overflow: hidden;
@@ -1477,7 +1477,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: inherit;
-    background: #27262c;
+    background: white;
     border-radius: 24px;
 }
 
@@ -1497,7 +1497,7 @@ body {
 }
 
 .div4_box_a_text1 {
-    color: #F4EEFF;
+    color: #280d5f;
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;
@@ -1514,7 +1514,7 @@ body {
 }
 
 #div4_box_a_text1b {
-    color: #b8add2;
+    color: #7a6eaa;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -1577,7 +1577,7 @@ body {
 }
 
 .trade_anything {
-    background-color: #08060b;
+    background-color: #faf9fa;
     box-sizing: border-box;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -1610,7 +1610,7 @@ body {
 
 .text_trade {
     font-size: 40px;
-    color: #F4EEFF;
+    color: #280d5f;
     margin-bottom: 24px;
     font-weight: 600;
     line-height: 1.1;
@@ -1622,7 +1622,7 @@ body {
 
 .subtext_trade {
     margin-bottom: 24px;
-    color: #B8ADD2;
+    color: #7a6eaa;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -1659,7 +1659,7 @@ body {
     padding-left: 24px;
     padding-right: 24px;
     background-color: #1FC7D4;
-    color: #191326;
+    color: white;
     margin-right: 16px;
     border: none;
 }
@@ -1838,7 +1838,7 @@ body {
 
 /* div_6 */
 .div6earnpassive {
-    background: linear-gradient(166.77deg, #3b4155, #3a3045);
+    background: linear-gradient(111.68deg,#f2ecf2,#e8f2f6);
     color: white;
     display: flex;
     flex-direction: column;
@@ -1999,10 +1999,11 @@ body {
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;
+    color: #280d5f;
 }
 
 .div6text2 {
-    color: #b8add2;
+    color: #7a6eaa;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 24px;
@@ -2168,14 +2169,14 @@ body {
 
 .aprtext {
     font-weight: 400;
-    color: #b8add2;
+    color: #7a6eaa;
     line-height: 1;
     font-size: 16px;
 }
 
 .aprnumber {
     font-weight: 600;
-    color: white;
+    color: #280d5f;
     line-height: 1;
     font-size: 16px;
 }
@@ -2766,7 +2767,7 @@ body {
     font-family: 'Kanit', sans-serif;
     line-height: 1.5;
     font-size: 16px;
-    color: #191326;
+    color: white;
 }
 
 .div8_learn {
@@ -3791,7 +3792,9 @@ a {
     flex-shrink: 0;
     margin-left: 0.5rem;
 }
-
+.div6topsyruppoolstext {
+  color: #280d5f;
+}
 /* mobile padding fix */
 @media screen and (max-width: 576px) {
     #div6text1 {
