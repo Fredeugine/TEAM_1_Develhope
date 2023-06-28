@@ -64,6 +64,44 @@ export function Aptos_Page(){
         const HomeWrd2 = document.querySelector('.hmrd2')
         const BaseWrdB = document.querySelectorAll('.bl')
         const SwitchBtn = document.querySelector('.switchBtn')
+        const SwitchSvg = document.querySelector('.switchsvg')
+        const searchType = document.querySelectorAll('.rin')
+
+
+
+        searchType[2].addEventListener('keydown',function (event){
+            for (let i = 0; i < FLR.length; i++) {
+                FLR[i].style.display = 'none'
+            }
+
+            for (let i = 0; i < FLR.length; i++) {
+
+                if (BaseWrdB[i].innerText.toLowerCase().includes(searchType[2].value.toLowerCase())){
+                    FLR[i].style.display = 'flex'
+                }
+                let splitVal = searchType[2].value.toLowerCase().split('')
+                if (BaseWrdB[i].innerText.toLowerCase().includes(splitVal[i])){
+                    console.log('hehe')
+                    FLR[i].style.display = 'flex'
+                }
+            }
+        })
+        // let k = 'bluex'
+        // let v = k.split('')
+        // console.log(v)
+        // if ('cake'.includes('ca')){
+        //     console.log('yes')
+        // }
+        // else{
+        //     console.log('no')
+        // }
+
+        SwitchBtn.addEventListener('mouseover',function (){
+            SwitchSvg.src = '/images/Aptos/k.svg'
+        })
+        SwitchBtn.addEventListener('mouseout',function (){
+            SwitchSvg.src = '/images/btm.svg'
+        })
         closeBtn.addEventListener('click',function (){
             SATPage.style.display = 'none'
         })
@@ -166,14 +204,14 @@ export function Aptos_Page(){
                         <div className={'padd'}>
                             <div className={'crd2'}>
                                 <Crd2Inn1></Crd2Inn1>
-                                <input className={'rin'} defaultValue={'sdfsdf'} type={'text'}/>
+                                <input className={'rin'} placeholder={'0.0'} type={'text'}/>
                             </div>
 
-                            <div className={'switchBtn'}><img src={'/images/btm.svg'}/></div>
+                            <div className={'switchBtn'}><img className={'switchsvg'} src={'/images/btm.svg'}/></div>
 
                             <div className={'crd2'}>
                                 <Crd2Inn12></Crd2Inn12>
-                                    <input className={'rin'} defaultValue={'0'} type={'text'}/>
+                                    <input className={'rin'} placeholder={'0.0'} type={'text'}/>
                             </div>
 
                             <div className={'slip'}>
