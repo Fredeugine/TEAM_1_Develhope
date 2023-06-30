@@ -1,4 +1,6 @@
-main
+body {
+  overflow-x: hidden;
+}
 
 /* page up button */
 .page-up {
