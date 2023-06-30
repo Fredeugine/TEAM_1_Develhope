@@ -344,7 +344,7 @@ body{
 }
 
 .options {
-    visibility: hidden;
+    display: none;
     display: flex;
     flex-direction: column;
     gap: 0;
