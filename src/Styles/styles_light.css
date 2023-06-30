@@ -4042,7 +4042,7 @@ html::-webkit-scrollbar-track {
 .dark_switchbutton:hover {
   color: blueviolet;
   background: lightgray;
-  transition: 0.3 ease-in-out;
+  transition: ease-in-out;
 }
 
 .dark_switchbutton:active {

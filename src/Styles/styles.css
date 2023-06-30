@@ -4033,7 +4033,7 @@ html::-webkit-scrollbar-track {
 .light_switchbutton:hover {
   color: orangered;
   background: lightyellow;
-  transition: 0.3 ease-in-out;
+  transition: ease-in-out;
   box-shadow: 0 6px lightsalmon;
   border: 2px solid lightsalmon;
 }
