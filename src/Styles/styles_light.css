@@ -4022,3 +4022,32 @@ html::-webkit-scrollbar-track {
   }
 }
 
+.dark_switchbutton {
+  height: 50px;
+  border-radius: 32px;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: white;
+  cursor: pointer;
+  border: 2px solid blueviolet;
+  outline: none;
+  box-shadow: 0 6px blueviolet;
+  transition: 0.3 ease-in-out;
+}
+
+.dark_switchbutton:hover {
+  color: blueviolet;
+  background: lightgray;
+  transition: 0.3 ease-in-out;
+}
+
+.dark_switchbutton:active {
+  background: lightgray;
+  box-shadow: 0 2px blueviolet;
+  transform: translateY(4px);
+  transition: 0.3 ease-in-out;
+}

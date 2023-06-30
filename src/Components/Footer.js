@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
+
 export default function Footer() {
   return (
     <footer style={{ background: "#27262c" }}>
@@ -235,7 +237,7 @@ export default function Footer() {
           </div>
           <div className="theme">
             <div className="theme2">
-              <div className="dark-theme">
+              {/* <div className="dark-theme">
                 <div className="langs">
                   <div className="dark-appearance">
                     <input
@@ -266,7 +268,7 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="race">
                 <button className="worldlang">
                   <img
@@ -277,28 +279,41 @@ export default function Footer() {
                   <div className="rep">EN</div>
                 </button>
                 <div className="abovelang" />
-                <button
-                  onClick={() => {
-                    localStorage.setItem(
-                      "TYPE_OF_THEME",
-                      JSON.stringify("dark")
-                    );
-                    window.location.reload(false);
-                  }}
-                >
-                  Dark
-                </button>
-                <button
-                  onClick={() => {
-                    localStorage.setItem(
-                      "TYPE_OF_THEME",
-                      JSON.stringify("light")
-                    );
-                    window.location.reload(false);
-                  }}
-                >
-                  Light
-                </button>
+                {themePref === "dark" ? (
+                  <button
+                    className="light_switchbutton"
+                    onClick={() => {
+                      localStorage.setItem(
+                        "TYPE_OF_THEME",
+                        JSON.stringify("light")
+                      );
+                      window.location.reload(false);
+                    }}
+                  >
+                    Light Mode
+                    <img
+                      className="light_switchsvg"
+                      src="/images/sunny.svg"
+                    ></img>
+                  </button>
+                ) : (
+                  <button
+                    className="dark_switchbutton"
+                    onClick={() => {
+                      localStorage.setItem(
+                        "TYPE_OF_THEME",
+                        JSON.stringify("dark")
+                      );
+                      window.location.reload(false);
+                    }}
+                  >
+                    Dark Mode{" "}
+                    <img
+                      className="dark_switchsvg"
+                      src="/images/sunshine.svg"
+                    ></img>
+                  </button>
+                )}
               </div>
             </div>
             <div className="endlogo">

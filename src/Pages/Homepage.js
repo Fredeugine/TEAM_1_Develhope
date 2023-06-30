@@ -4,7 +4,7 @@ import { MbNavbar, Navbar } from "../Components/Navbar";
 import { Aptos_Page } from "./Aptos_Page";
 import { IFOPage } from "./IFO Page";
 
-let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME"));
+let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
 
 export function Homepage() {
   useEffect(() => {
