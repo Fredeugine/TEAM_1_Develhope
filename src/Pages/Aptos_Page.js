@@ -30,7 +30,7 @@ function Crd2Inn12(){
 }
 
 export function Aptos_Page(){
-    useEffect(function (){
+    useEffect(function () {
     //     var prevScrollPos = window.pageYOffset;
     //     window.onscroll = function() {
     //         var currentScrollPos = window.pageYOffset;
@@ -49,7 +49,10 @@ export function Aptos_Page(){
     //
     //         prevScrollPos = currentScrollPos;
     //     };
-        const closeBtn = document.querySelector('.closex')
+        const closeBtn = document.querySelectorAll('.closex')
+        const setBtn = document.querySelector('.stt')
+        const tDiv = document.querySelector('.tkSelectDiv')
+        const setPage = document.querySelector('.settings')
         const ChooseSAT = document.querySelector('.crd2Inn1')
         const ChooseSAT2 = document.querySelector('.crd2Inn2')
         const SATPage = document.querySelector('.ovrl')
@@ -66,7 +69,131 @@ export function Aptos_Page(){
         const SwitchBtn = document.querySelector('.switchBtn')
         const SwitchSvg = document.querySelector('.switchsvg')
         const searchType = document.querySelectorAll('.rin')
+        const DarkModeBtn = document.querySelectorAll('.DWswitch')
+        const Moon = document.querySelectorAll('.circo')
+        const DLsvg = document.querySelector('.drch')
+        const Slit = document.querySelectorAll('.slit')
 
+
+
+        let clicked2;
+        setBtn.addEventListener('click',function (){
+            SATPage.style.display = 'flex'
+            setPage.style.display = 'flex'
+            tDiv.style.display = 'none'
+        })
+        Slit[0].addEventListener('click',function () {
+            Slit[0].style.backgroundColor = '#1fc7d4'
+            Slit[0].style.color = '#191326'
+            Slit[1].style.backgroundColor = '#353547'
+            Slit[1].style.color =  '#1fc7d4'
+            Slit[2].style.backgroundColor = '#353547'
+            Slit[2].style.color =  '#1fc7d4'
+        })
+        Slit[1].addEventListener('click',function () {
+            Slit[1].style.backgroundColor = '#1fc7d4'
+            Slit[1].style.color = '#191326'
+            Slit[2].style.backgroundColor = '#353547'
+            Slit[2].style.color =  '#1fc7d4'
+            Slit[0].style.backgroundColor = '#353547'
+            Slit[0].style.color =  '#1fc7d4'
+        })
+        Slit[2].addEventListener('click',function () {
+            Slit[2].style.backgroundColor = '#1fc7d4'
+            Slit[2].style.color = '#191326'
+            Slit[1].style.backgroundColor = '#353547'
+            Slit[1].style.color =  '#1fc7d4'
+            Slit[0].style.backgroundColor = '#353547'
+            Slit[0].style.color =  '#1fc7d4'
+        })
+
+        let dark = 0
+        let dark2 = 0
+
+        function toggleDarkMode(index) {
+            const button = DarkModeBtn[index];
+            const moon = Moon[index];
+            const backgroundColor = dark2 === 0 ? '#31d0aa' : '#372f47';
+
+            if (dark2 === 0) {
+                moon.style.transform = 'translateX(110%)';
+                dark2++;
+            } else {
+                moon.style.transform = 'translateX(0%)';
+                dark2--;
+            }
+
+            button.style.backgroundColor = backgroundColor;
+        }
+
+        DarkModeBtn[0].addEventListener('click', function () {
+            const sunImage = '/images/sun2.svg';
+            const moonImage = '/images/Moon2.svg';
+
+            DLsvg.src = dark === 0 ? sunImage : moonImage;
+            Moon[0].style.transform = dark === 0 ? 'translateX(-110%)' : 'translateX(0%)';
+            dark++;
+        });
+
+        DarkModeBtn[1].addEventListener('click', function () {
+            toggleDarkMode(1);
+        });
+
+        DarkModeBtn[2].addEventListener('click', function () {
+            toggleDarkMode(2);
+        });
+
+        DarkModeBtn[3].addEventListener('click', function () {
+            toggleDarkMode(3);
+        });
+
+        // DarkModeBtn[0].addEventListener('click', function () {
+        //     if (dark === 0) {
+        //         DLsvg.src = '/images/sun2.svg'
+        //         Moon[0].style.transform = 'translateX(-110%)'
+        //         dark++
+        //     } else {
+        //         DLsvg.src = '/images/Moon2.svg'
+        //         Moon[0].style.transform = 'translateX(0%)'
+        //         dark--
+        //     }
+        // })
+        // DarkModeBtn[1].addEventListener('click', function () {
+        //     if (dark2 === 0) {
+        //         Moon[1].style.transform = 'translateX(110%)'
+        //         dark2++
+        //         DarkModeBtn[1].style.backgroundColor = '#31d0aa'
+        //
+        //     } else {
+        //         Moon[1].style.transform = 'translateX(0%)'
+        //         dark2--
+        //         DarkModeBtn[1].style.backgroundColor = '#372f47'
+        //     }
+        // })
+        // DarkModeBtn[2].addEventListener('click', function () {
+        //     if (dark2 === 0) {
+        //         Moon[2].style.transform = 'translateX(110%)'
+        //         dark2++
+        //         DarkModeBtn[2].style.backgroundColor = '#31d0aa'
+        //
+        //     } else {
+        //         Moon[2].style.transform = 'translateX(0%)'
+        //         dark2--
+        //         DarkModeBtn[2].style.backgroundColor = '#372f47'
+        //     }
+        // })
+        // DarkModeBtn[3].addEventListener('click', function () {
+        //     if (dark2 === 0) {
+        //         Moon[3].style.transform = 'translateX(110%)'
+        //         dark2++
+        //         DarkModeBtn[2].style.backgroundColor = '#31d0aa'
+        //
+        //     } else {
+        //         Moon[3].style.transform = 'translateX(0%)'
+        //         dark2--
+        //         DarkModeBtn[3].style.backgroundColor = '#372f47'
+        //     }
+        // })
 
 
         searchType[2].addEventListener('keydown',function (event){
@@ -102,14 +229,19 @@ export function Aptos_Page(){
         SwitchBtn.addEventListener('mouseout',function (){
             SwitchSvg.src = '/images/btm.svg'
         })
-        closeBtn.addEventListener('click',function (){
+        closeBtn[0].addEventListener('click',function (){
+            SATPage.style.display = 'none'
+        })
+        closeBtn[1].addEventListener('click',function (){
             SATPage.style.display = 'none'
         })
         let clicked;
+
         ChooseSAT.addEventListener('click',function (){
             clicked = 'a'
             SATPage.style.display = 'flex'
-            console.log(clicked)
+            tDiv.style.display = 'unset'
+            setPage.style.display = 'none'
             Bases.forEach(function (bases,index){
 
                 for (let i = 0; i < Bases.length; i++) {
@@ -140,7 +272,8 @@ export function Aptos_Page(){
         ChooseSAT2.addEventListener('click',function (){
             clicked = 'b'
             SATPage.style.display = 'flex'
-            console.log(clicked)
+            tDiv.style.display = 'flex'
+            setPage.style.display = 'none'
             Bases.forEach(function (bases,index){
 
                 for (let i = 0; i < Bases.length; i++) {
@@ -175,18 +308,13 @@ export function Aptos_Page(){
             BaseImg2.src = bas1img
             HomeWrd1.innerText = BaseName2
             HomeWrd2.innerText = BaseName1
-
-
-
         })
 
     },[])
 
     return(
         <>
-
             <body>
-
                 <header>
                     <div className={'bar2'}>
                         <span className={'swap'}>Swap <span className={'lb'}></span></span>
@@ -483,6 +611,53 @@ export function Aptos_Page(){
                             </div>
                         </div>
                         <span className={'mnt'}>Manage Tokens</span>
+                    </div>
+                    <div className={'settings'}>
+                        <div className={'setIn'}>
+                            <span>Settings</span>
+                            <img className={'closex'} src={'/images/x.svg'} />
+                        </div>
+                        <div className={'oset'}>
+                            <div className={'osetIn'}>
+                                <span>Dark mode</span>
+                                <div className={'DWswitch'}>
+                                    <img src={'/images/sun.svg'}/>
+                                    <img src={'/images/moon.svg'}/>
+                                    <span className={'circo'}>
+                                    <img className={'drch'} src={'/images/moon2.svg'}/>
+                                </span>
+                                </div>
+                            </div>
+                            <div className={'osetIn2'}>
+                                <span>Expert mode <img className={'question'} src={ '/images/markq.svg'}/></span>
+                                <div className={'DWswitch'}>
+                                    <span className={'circo'}></span>
+                                </div>
+                            </div>
+
+                            <div className={'osetIn3'}>
+                                <span>Slippage tolerance <img className={'question'} src={ '/images/markq.svg'}/></span>
+                                <div className={'flr1'}>
+                                    <button className={'slit'}>0.1%</button>
+                                    <button className={'slit'}>0.1%</button>
+                                    <button className={'slit'}>0.1%</button>
+                                    <input className={'typ'} type={'text'} placeholder={'1.00'}/>
+                                </div>
+                            </div>
+
+                            <div className={'osetIn2'}>
+                                <span>Allow Multihops <img className={'question'} src={ '/images/markq.svg'}/></span>
+                                <div className={'DWswitch'}>
+                                    <span className={'circo'}></span>
+                                </div>
+                            </div>
+                            <div className={'osetIn2'}>
+                                <span>Flippy sounds <img className={'question'} src={ '/images/markq.svg'}/></span>
+                                <div className={'DWswitch'}>
+                                    <span className={'circo'}></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </body>

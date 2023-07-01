@@ -2,6 +2,36 @@
 body {
   overflow-x: hidden;
 }
+.DWswitch{
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    width: 56px;
+    height: 32px;
+    align-items: center;
+    background-color: #666171;
+    border-radius: 24px;
+    box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 200ms ease 0s;
+}
+.circo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #27262c;
+    transition: 200ms ease-in transform ;
+    right: 3px;
+    position: absolute;
+}
+.circo:hover,.circo:active{
+    box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px #7050af;
+}
 /* page up button */
 .page-up {
     position: fixed;
@@ -345,7 +375,6 @@ body{
 
 .options {
     display: none;
-    display: flex;
     flex-direction: column;
     gap: 0;
     width: 15.6rem;
@@ -3371,12 +3400,13 @@ a {
 .tenthdiv {
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .content {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
 }
 
 
@@ -3916,7 +3946,7 @@ html::-webkit-scrollbar-track {
 #options7 {
     position: absolute;
     visibility: hidden;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 170px;
@@ -3946,7 +3976,7 @@ html::-webkit-scrollbar-track {
 #options72{
     position: absolute;
     visibility: hidden;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 170px;
