@@ -72,8 +72,10 @@ export function Navbar() {
       const divs = options[index];
       button.addEventListener("mouseover", function showOptions() {
         options[index].style.visibility = "visible";
+        options[index].style.display = "flex";
         divs.addEventListener("mouseover", function showOptions() {
           options[index].style.visibility = "visible";
+          options[index].style.display = "flex";
         });
       });
 
@@ -95,6 +97,7 @@ export function Navbar() {
 
         if (buttonNotHovered && divNotHovered) {
           divs.style.visibility = "hidden";
+          divs.style.display = "none";
         }
       }
     });

@@ -4,6 +4,26 @@ import { Link } from "react-router-dom";
 let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
 
 export default function Footer() {
+  // useEffect(function () {
+  //   const DarkModeBtn = document.querySelectorAll('.DWswitch')
+  //   const Moon = document.querySelectorAll('.circo')
+  //   const DLsvg = document.querySelector('.drch')
+  //
+  //   let dark = 0
+  //   DarkModeBtn[0].addEventListener('click', function () {
+  //     console.log('blue')
+  //     if (dark === 0) {
+  //       DLsvg.src = '/images/sun2.svg'
+  //       Moon[0].style.transform = 'translateX(-110%)'
+  //       dark++
+  //     } else {
+  //       DLsvg.src = '/images/Moon2.svg'
+  //       Moon[0].style.transform = 'translateX(0%)'
+  //       dark--
+  //     }
+  //   })
+
+  // },[])
   return (
     <footer style={{ background: "#27262c" }}>
       <div id="div10" className="div10">
@@ -279,6 +299,35 @@ export default function Footer() {
                   <div className="rep">EN</div>
                 </button>
                 <div className="abovelang" />
+                {/*{themePref === "dark" ? (*/}
+                {/*    <div className={'DWswitch'} onClick={() => {*/}
+                {/*      localStorage.setItem(*/}
+                {/*          "TYPE_OF_THEME",*/}
+                {/*          JSON.stringify("light")*/}
+                {/*      );*/}
+                {/*      window.location.reload(false);*/}
+                {/*    }} >*/}
+                {/*      <img src={'/images/sun.svg'}/>*/}
+                {/*      <img src={'/images/moon.svg'}/>*/}
+                {/*      <span className={'circo'}>*/}
+                {/*        <img className={'drch'} src={'/images/moon2.svg'}/>*/}
+                {/*      </span>*/}
+                {/*    </div>*/}
+                {/*) : (*/}
+                {/*    <div className={'DWswitch'} onClick={() => {*/}
+                {/*      localStorage.setItem(*/}
+                {/*          "TYPE_OF_THEME",*/}
+                {/*          JSON.stringify("dark")*/}
+                {/*      );*/}
+                {/*      window.location.reload(false);*/}
+                {/*    }} >*/}
+                {/*      <img src={'/images/sun.svg'}/>*/}
+                {/*      <img src={'/images/moon.svg'}/>*/}
+                {/*      <span className={'circo'}>*/}
+                {/*        <img className={'drch'} src={'/images/moon2.svg'}/>*/}
+                {/*      </span>*/}
+                {/*    </div>*/}
+                {/*)}*/}
                 {themePref === "dark" ? (
                   <button
                     className="light_switchbutton"
