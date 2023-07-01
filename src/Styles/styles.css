@@ -1,5 +1,7 @@
 /* main */
-
+body {
+  overflow-x: hidden;
+}
 /* page up button */
 .page-up {
     position: fixed;
@@ -342,8 +344,8 @@ body{
 }
 
 .options {
-    visibility: hidden;
     display: none;
+    display: flex;
     flex-direction: column;
     gap: 0;
     width: 15.6rem;
@@ -4011,3 +4013,35 @@ html::-webkit-scrollbar-track {
   }
 }
 
+.light_switchbutton {
+  height: 50px;
+  border-radius: 32px;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid blueviolet;
+  outline: none;
+  box-shadow: 0 6px blueviolet;
+  transition: 0.3 ease-in-out;
+}
+
+.light_switchbutton:hover {
+  color: orangered;
+  background: lightyellow;
+  transition: ease-in-out;
+  box-shadow: 0 6px lightsalmon;
+  border: 2px solid lightsalmon;
+}
+
+
+.light_switchbutton:active {
+  background: lightyellow;
+  box-shadow: 0 2px lightsalmon;
+  transform: translateY(4px);
+  transition: 0.3 ease-in-out;
+}
