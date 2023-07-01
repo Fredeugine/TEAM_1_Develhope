@@ -343,7 +343,7 @@ body{
 
 .options {
     visibility: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0;
     width: 15.6rem;
