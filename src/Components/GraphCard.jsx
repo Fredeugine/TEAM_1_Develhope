@@ -1,5 +1,5 @@
 import React, {setTimePeriod } from "react";
-// import { Line } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
   // Placeholder data for the chart
