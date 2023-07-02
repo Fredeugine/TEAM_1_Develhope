@@ -5,7 +5,6 @@ import {Navbar, MbNavbar} from "../Components/Navbar";
 export default function Swap(){
     return(
         <>
-            <Navbar></Navbar>
             <a href="#" className="page-up">
                 <svg
                     viewBox="0 0 24 24"
