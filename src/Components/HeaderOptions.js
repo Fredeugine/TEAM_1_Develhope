@@ -1,5 +1,5 @@
 import React from "react";
-// import "..Styles/HeaderOptions.css"
+import '../Styles/HeaderOptions.css'
 
 const HeaderOptions = () => {
   return (

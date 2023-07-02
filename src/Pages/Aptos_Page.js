@@ -1,9 +1,8 @@
 import {MbNavbar, Navbar} from "../Components/Navbar";
 import '../Styles/styles.css'
 import '../Styles/Aptos.css'
-import React, {useEffect, useLayoutEffect, useState} from "react";
-import {Route, Routes} from "react-router-dom";
-import {IFOPage} from "./IFO Page";
+import React, {useEffect} from "react";
+import HeaderOptions from "../Components/HeaderOptions";
 
 
 function Crd2Inn1(){
@@ -126,15 +125,6 @@ export function Aptos_Page(){
             button.style.backgroundColor = backgroundColor;
         }
 
-        DarkModeBtn[0].addEventListener('click', function () {
-            const sunImage = '/images/sun2.svg';
-            const moonImage = '/images/Moon2.svg';
-
-            DLsvg.src = dark === 0 ? sunImage : moonImage;
-            Moon[0].style.transform = dark === 0 ? 'translateX(-110%)' : 'translateX(0%)';
-            dark++;
-        });
-
         DarkModeBtn[1].addEventListener('click', function () {
             toggleDarkMode(1);
         });
@@ -147,17 +137,18 @@ export function Aptos_Page(){
             toggleDarkMode(3);
         });
 
-        // DarkModeBtn[0].addEventListener('click', function () {
-        //     if (dark === 0) {
-        //         DLsvg.src = '/images/sun2.svg'
-        //         Moon[0].style.transform = 'translateX(-110%)'
-        //         dark++
-        //     } else {
-        //         DLsvg.src = '/images/Moon2.svg'
-        //         Moon[0].style.transform = 'translateX(0%)'
-        //         dark--
-        //     }
-        // })
+        DarkModeBtn[0].addEventListener('click', function () {
+            if (dark === 0) {
+                DLsvg.src = '/images/sun2.svg'
+                Moon[0].style.transform = 'translateX(-110%)'
+                dark++
+            } else {
+                DLsvg.src = '/images/Moon2.svg'
+                Moon[0].style.transform = 'translateX(0%)'
+                dark--
+            }
+        })
+        // My original code, the code above is a summarized version of it by chatgpt
         // DarkModeBtn[1].addEventListener('click', function () {
         //     if (dark2 === 0) {
         //         Moon[1].style.transform = 'translateX(110%)'
@@ -272,7 +263,7 @@ export function Aptos_Page(){
         ChooseSAT2.addEventListener('click',function (){
             clicked = 'b'
             SATPage.style.display = 'flex'
-            tDiv.style.display = 'flex'
+            tDiv.style.display = 'unset'
             setPage.style.display = 'none'
             Bases.forEach(function (bases,index){
 
@@ -364,6 +355,7 @@ export function Aptos_Page(){
                             <div className={'hpng'}><img className={'hpng'} src={'/images/help.png'}/></div>
                         </div>
                     </div>
+
                 </footer>
 
             </div>
