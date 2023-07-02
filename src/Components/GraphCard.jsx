@@ -25,7 +25,7 @@ const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
   return (
     <div className="graph-card">
       <div className="exchange-rate">{exchangeRate}</div>
-{/*      <Line data={chartData} options={chartOptions} /> */}
+      <Line data={chartData} options={chartOptions} />
       <div className="time-period-options">
         <button onClick={() => setTimePeriod("24H")}>24H</button>
         <button onClick={() => setTimePeriod("1W")}>1W</button>
