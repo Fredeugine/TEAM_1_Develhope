@@ -263,7 +263,7 @@ export function Aptos_Page(){
         ChooseSAT2.addEventListener('click',function (){
             clicked = 'b'
             SATPage.style.display = 'flex'
-            tDiv.style.display = 'flex'
+            tDiv.style.display = 'unset'
             setPage.style.display = 'none'
             Bases.forEach(function (bases,index){
 
