@@ -3,6 +3,7 @@ import InfoCard from "../Components/InfoCard";
 import GraphCard from "../Components/GraphCard";
 import PriceChangeListCard from "../Components/PriceChangeListCard";
 import HeaderOptions from "../Components/HeaderOptions";
+import '../Styles/Swap.css';
 
 export default function Swap() {
   const [leftCard, setLeftCard] = useState(null);
