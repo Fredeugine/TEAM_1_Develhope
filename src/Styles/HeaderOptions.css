@@ -1,7 +1,9 @@
 .header-options {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   padding: 20px;
+  background-color: white;
 }
 
 .header-option {

@@ -166,9 +166,9 @@ export function Navbar() {
               Trade <span className="scale_borders" />
             </button>
             <div className="options" id="options1">
-              <a id="oo" href="swap.html">
+              <Link id="oo" to="/Swap">
                 <span className="opt_kids">Swap</span>
-              </a>
+              </Link>
               <span className="opt_kids">Liquid</span>
               <span className="opt_kids">Liquidity</span>
               <span className="opt_kids" id="perpetual">
@@ -250,7 +250,7 @@ export function Navbar() {
                   Affiliate Program
                 </span>
               </Link>
-              <Link id="ooo" to="leaderboard.html">
+              <Link id="ooo" to={'/Leaderboard'}>
                 <span className="opt_kids">Leaderboard</span>
               </Link>
               <span className="opt_kids" id="blog">

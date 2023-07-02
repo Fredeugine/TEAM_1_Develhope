@@ -13,8 +13,9 @@ export default function Swap() {
 
   return (
     <div>
-      <HeaderOptions />
+        <HeaderOptions />
       <InfoCard onLeftCardSelection={handleLeftCardSelection} />
+
       <div>
         {leftCard === "graph" && <GraphCard />}
         {leftCard === "priceChangeList" && <PriceChangeListCard />}

@@ -360,12 +360,12 @@ body{
     border-bottom: 1px solid #383241;
 }
 #oo:hover,#farms:hover,#tr:hover,#ovr:hover,#info:hover,#sln:hover{
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 #bridge:hover,#pl:hover,#potteryDiv:hover,#act:hover,#docs:hover,#apt:hover,#apt2:hover{
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #sec {
