@@ -1,8 +1,6 @@
-import {MbNavbar, Navbar} from "../Components/Navbar";
 import '../Styles/styles.css'
 import '../Styles/Aptos.css'
 import React, {useEffect} from "react";
-import HeaderOptions from "../Components/HeaderOptions";
 
 
 function Crd2Inn1(){
@@ -247,7 +245,7 @@ export default function Swap_Page(){
                         <span className={'liqui'}>Perpetual <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'brr'}>Bridge  <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'liqui'}>Limit (V2)</span>
-                        <span className={'liqui'}>Buy Crypto </span>
+                        <span className={'liqui'}>Buy_Crypto</span>
                     </div>
                 </header>
                 <div className={'main'}>
