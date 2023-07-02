@@ -2,7 +2,7 @@ import React, {setTimePeriod } from "react";
 // import { Line } from "react-chartjs-2";
 
 const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
-  // Placeholder data for the chart (you can replace it with actual data)
+  // Placeholder data for the chart
   const chartData = {
     labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
     datasets: [
