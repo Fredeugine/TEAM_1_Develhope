@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Styles/InfoCard.css";
 
 export default function InfoCard() {
   const [fromCurrency, setFromCurrency] = useState("BNB");
@@ -7,7 +8,9 @@ export default function InfoCard() {
   const [toAmount, setToAmount] = useState(0.0);
   const [isReverted, setIsReverted] = useState(false);
   const [isGraphVisible, setIsGraphVisible] = useState(false);
-  const [isPriceChangeListVisible, setIsPriceChangeListVisible] = useState(false);
+  const [isPriceChangeListVisible, setIsPriceChangeListVisible] = useState(
+    false
+  );
 
   const handleFromCurrencyChange = (e) => {
     setFromCurrency(e.target.value);

@@ -1,23 +1,36 @@
 .info-card {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.clickable-svgs {
+.info-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.info-card .clickable-svgs {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.currency-selection {
+.info-card .currency-selection {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.revert-arrow {
+.info-card .revert-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,18 +38,40 @@
   cursor: pointer;
 }
 
-.connect-wallet-button {
+.info-card .revert-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.info-card .currency-selection select {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.info-card .currency-selection input[type="number"] {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.info-card .connect-wallet-button {
   display: block;
   width: 100%;
   padding: 12px 20px;
   border-radius: 4px;
-  background-color: #4caf50;
+  background-color: #1e90ff;
   color: #ffffff;
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
 
-.connect-wallet-button:hover {
-  background-color: #45a049;
+.info-card .connect-wallet-button:hover {
+  background-color: #187bcd;
 }
