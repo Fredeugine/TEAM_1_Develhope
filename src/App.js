@@ -12,6 +12,7 @@ import { Homepage } from "./Pages/Homepage";
 import { LeaderboardPage } from "./Pages/Leaderboard Page";
 import { IFOPage } from "./Pages/IFO Page";
 import Swap from "./Pages/Swap";
+import Swap_Page from './Pages/Swap_Page';
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
 import Footer from "./Components/Footer";
@@ -56,7 +57,7 @@ function App() {
         <Route path="/Aptos" element={<Aptos_Page />}></Route>
         <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>
         <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>
-        <Route path="/Swap" element={<Swap />}></Route>
+        <Route path="/Swap" element={<Swap_Page />}></Route>
       </Routes>
       <Footer></Footer>
       <MbNavbar />

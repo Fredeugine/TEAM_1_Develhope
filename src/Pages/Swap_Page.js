@@ -28,7 +28,7 @@ function Crd2Inn12(){
     )
 }
 
-export function Swap_Page(){
+export default function Swap_Page(){
     useEffect(function () {
 
         const closeBtn = document.querySelectorAll('.closex')
@@ -244,7 +244,10 @@ export function Swap_Page(){
                     <div className={'bar2'}>
                         <span className={'swap'}>Swap <span className={'lb'}></span></span>
                         <span className={'liqui'}>Liquidity</span>
+                        <span className={'liqui'}>Perpetual <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'brr'}>Bridge  <img className={'lli'} src={'/images/link.svg'}/></span>
+                        <span className={'liqui'}>Limit (V2)</span>
+                        <span className={'liqui'}>Buy Crypto </span>
                     </div>
                 </header>
                 <div className={'main'}>
