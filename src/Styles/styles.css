@@ -304,7 +304,6 @@ body{
     border-radius: 1.2rem;
     color: #b8add2;
     z-index: 1;
-
 }
 
 
@@ -349,22 +348,22 @@ body{
 .opt_kids:hover{
     background-color: #464659;
 }
-#o:hover,#oo:hover,#ooo:hover,#ifo:hover{
+#o:hover,#oo:hover,#ooo:hover,#ifo:hover,#affiliates:hover{
     background-color: #404054;
     border-left: none ;
     border-right: none;
 }
-#oo> .opt_kids:hover{
+#oo > .opt_kids:hover,#o > .opt_kids,#ooo > .opt_kids,#ifo > .opt_kids,#affiliates > .opt_kids{
     background-color: transparent;
 }
 #sln{
     border-bottom: 1px solid #383241;
 }
 #oo:hover,#farms:hover,#tr:hover,#ovr:hover,#info:hover,#sln:hover{
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
 }
-#bridge:hover,#pl:hover,#potteryDiv:hover,#act:hover,#docs:hover,#apt:hover{
+#bridge:hover,#pl:hover,#potteryDiv:hover,#act:hover,#docs:hover,#apt:hover,#apt2:hover{
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
@@ -391,9 +390,13 @@ body{
     padding-bottom: 4px;
     padding-top: 4px;
 }
-#o,#oo,#ooo,#ifo{
+
+#o,#oo,#ooo,#ifo,#affiliates{
     height: 48px;
     display: inline-flex;
+    max-width: 100%;
+    width: 100%;
+    color: inherit;
 }
 
 #options2 {
@@ -857,11 +860,6 @@ body{
     cursor: pointer;
 
 }
-#00,.opt_kids{
-    background-color: #464659 !important;
-    color: red;
-}
-
 .buttons {
     color: #b8add2;
     display: flex;
@@ -2209,7 +2207,7 @@ body {
     color: inherit;
 }
 
-#options5 > #ifo {
+#options5 > #ifo, #options5 > #affiliates {
     color: inherit;
 }
 

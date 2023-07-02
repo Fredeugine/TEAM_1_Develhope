@@ -186,7 +186,6 @@ body{
     border-bottom: 1px solid #e7e3eb;
 }
 
-
 .mbNavbar {
     width: 100%;
     display: none;
@@ -304,7 +303,6 @@ body{
     border-radius: 1.2rem;
     color: #b8add2;
     z-index: 1;
-
 }
 
 #btn_trade, #btn_earn, #btn_win, #btn_nft, .buttons {
@@ -351,10 +349,10 @@ body{
     border-right: none;
 }
 .opt_kids:hover{
-    background-color: #464659;
+    background-color: #eff4f5;
 }
-#o:hover,#oo:hover,#ooo:hover,#ifo:hover{
-    background-color: #404054;
+#o:hover,#oo:hover,#ooo:hover,#ifo:hover,#affiliates:hover{
+    background-color: #eff4f5;
     border-left: none ;
     border-right: none;
 }
@@ -368,7 +366,8 @@ body{
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
-#bridge:hover,#pl:hover,#potteryDiv:hover,#act:hover,#docs:hover,#apt:hover{
+
+#bridge:hover,#pl:hover,#potteryDiv:hover,#act:hover,#docs:hover,#apt:hover,#apt2:hover{
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
@@ -429,7 +428,7 @@ body{
 #options6 {
     inset: 0 auto auto 0;
     visibility: hidden;
-    background-color: #27262c;
+    background-color: #fff;
     display: none;
     flex-direction: column;
     width: 15.6rem;
@@ -440,7 +439,7 @@ body{
     position: absolute;
     top: 2.6rem;
     left: -2rem;
-    border: 1px solid #383241;
+    border: 1px solid #e7e3eb;
     line-height: 24px;
     font-size: 16px;
     font-weight: 400;
@@ -863,10 +862,6 @@ body{
     cursor: pointer;
 
 }
-#00,.opt_kids{
-    background-color: #464659 !important;
-    color: red;
-}
 
 .buttons {
     color: #b8add2;
@@ -1069,13 +1064,13 @@ body{
     display: flex;
     gap: 10px;
     justify-content: flex-start;
-    color: #f4eeff;
+    color: #280d5f;
 }
 #apt2{
     display: flex;
     gap: 10px;
     justify-content: flex-start;
-    color: #f4eeff;
+    color: #280d5f;
 }
 .eth{
     width: 24px;
@@ -2215,7 +2210,7 @@ body {
     color: inherit;
 }
 
-#options5 > #ifo {
+#options5 > #ifo, #options5 > #affiliates {
     color: inherit;
 }
 
@@ -3993,11 +3988,11 @@ html::-webkit-scrollbar-track {
     border-radius: 0;
     padding: 16px;
     overflow: auto;
-    color: #b8add2;
+    color: #280d5f;
     height: 390px;
     gap: 14px;
     top: 2.5rem;
-    background-color: #27262c;
+    background-color: #fff;
     box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
     left: 50%;
     transform: translate(-50%, 0px);
@@ -4010,12 +4005,14 @@ html::-webkit-scrollbar-track {
     z-index: 234234;
 }
 #options72::-webkit-scrollbar-thumb {
-    background-color: #b8add2;
+    background-color: #7a6eaa;
     border-radius: 1rem;
-    width: 0.8rem;
+    width: 0.7rem;
+
 }
 #options72::-webkit-scrollbar {
     width: 0.5rem;
+    max-height: 10px;
 }
 
 #options72::-webkit-scrollbar-track {

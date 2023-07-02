@@ -239,20 +239,20 @@ export function Navbar() {
               <span id={"info"} className="opt_kids">
                 Info
               </span>
-              <Link to={"/IFO"}>
-                <span id="ifo" className="opt_kids">
+              <Link id="ifo" to={"/IFO"}>
+                <span  className="opt_kids">
                   IFO
                 </span>
               </Link>
               <span className="opt_kids">Voting</span>
-              <Link to={"/affiliates-program"}>
-                <span id="affiliates" className="opt_kids">
+              <Link  id="affiliates"  to={"/affiliates-program"}>
+                <span className="opt_kids">
                   Affiliate Program
                 </span>
               </Link>
-              <a id="ooo" href="leaderboard.html">
+              <Link id="ooo" to="leaderboard.html">
                 <span className="opt_kids">Leaderboard</span>
-              </a>
+              </Link>
               <span className="opt_kids" id="blog">
                 Blog <img src="/images/l-arrow.svg" />
               </span>
