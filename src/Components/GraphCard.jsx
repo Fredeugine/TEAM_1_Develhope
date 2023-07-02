@@ -1,5 +1,5 @@
-import React from "react";
-import { Line } from "react-chartjs-2";
+import { React, setTimePeriod } from "react";
+// import { Line } from "react-chartjs-2";
 
 const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
   // Placeholder data for the chart (you can replace it with actual data)
@@ -25,7 +25,7 @@ const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
   return (
     <div className="graph-card">
       <div className="exchange-rate">{exchangeRate}</div>
-      <Line data={chartData} options={chartOptions} />
+{/*      <Line data={chartData} options={chartOptions} /> */}
       <div className="time-period-options">
         <button onClick={() => setTimePeriod("24H")}>24H</button>
         <button onClick={() => setTimePeriod("1W")}>1W</button>
