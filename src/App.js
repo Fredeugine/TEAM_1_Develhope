@@ -16,6 +16,7 @@ import Swap_Page from './Pages/Swap_Page';
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
 import Footer from "./Components/Footer";
+import PageNotFound from "./Components/PageNotFound";
 
 let darkPref = localStorage.getItem("darkMode");
 
@@ -27,31 +28,7 @@ function App() {
         <Route path="/" element={<Homepage />}></Route>
         <Route
           path="*"
-          element={
-            <div
-              style={{
-                color: "white",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              {/* <img src="/images/beer.svg"></img> */}
-              <h1
-                style={{
-                  marginTop: "450px",
-                  fontSize: "72px",
-                }}
-              >
-                404
-              </h1>
-              <p style={{ fontWeight: "600" }}>Oops, page not found.</p>
-              <Link to={"/"} style={{ marginBottom: "450px" }}>
-                Back Home
-              </Link>
-            </div>
-          }
+          element={<PageNotFound />}
         ></Route>
         <Route path="/affiliates-program" element={<AffiliatesPage />}></Route>
         <Route path="/Aptos" element={<Aptos_Page />}></Route>
