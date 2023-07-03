@@ -245,7 +245,6 @@ export default function Swap_Page(){
                         <span className={'liqui'}>Perpetual <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'brr'}>Bridge  <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'liqui'}>Limit (V2)</span>
-                        <span className={'liqui'}>Buy_Crypto</span>
                     </div>
                 </header>
                 <div className={'main'}>
