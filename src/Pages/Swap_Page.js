@@ -245,7 +245,6 @@ export default function Swap_Page(){
                         <span className={'liqui'}>Perpetual <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'brr'}>Bridge  <img className={'lli'} src={'/images/link.svg'}/></span>
                         <span className={'liqui'}>Limit (V2)</span>
-                        <span className={'liqui'}>Buy_Crypto</span>
                     </div>
                 </header>
                 <div className={'main'}>
@@ -287,7 +286,7 @@ export default function Swap_Page(){
                                 <span className={'ndHlp'}>Need help ?</span>
                                 <span><img className={'ndd'} src={'/images/wing.svg'}/></span>
                             </div>
-                            <div className={'hpng'}><img className={'hpng'} src={'/images/help.png'}/></div>
+                            <div className={'hpng'}><img className={'hpng'} src={'/images/needHelp.png'}/></div>
                         </div>
                     </div>
 

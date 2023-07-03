@@ -25,18 +25,15 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route
-          path="*"
-          element={<PageNotFound />}
-        ></Route>
-        <Route path="/affiliates-program" element={<AffiliatesPage />}></Route>
-        <Route path="/Aptos" element={<Aptos_Page />}></Route>
-        <Route path="/IFO" element={<IFOPage></IFOPage>}></Route>
-        <Route path="/Leaderboard" element={<LeaderboardPage />}></Route>
-        <Route path="/Swap" element={<Swap_Page />}></Route>
+        <Route path="/" element={<Homepage />} />
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="/affiliates-program" element={<AffiliatesPage />} />
+        <Route path="/Aptos" element={<Aptos_Page />} />
+        <Route path="/IFO" element={<IFOPage></IFOPage>} />
+        <Route path="/Leaderboard" element={<LeaderboardPage />} />
+        <Route path="/Swap" element={<Swap_Page />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
       <MbNavbar />
     </div>
   );
