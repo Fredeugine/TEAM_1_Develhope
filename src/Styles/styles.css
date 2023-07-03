@@ -2135,14 +2135,14 @@ body {
 
 .div6_hidden {
     visibility: hidden;
-    position: absolute;
     width: 100%;
+    margin-top: -100px;
     display: grid;
     font-size: small;
     gap: 5px;
     grid-template-rows: 100px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    transition: opacity 0s ease 0s, top 0s ease 0s, all 0.4s ease-out 0s;
+    transition: opacity 0s ease 0s, margin-top 0s ease 0s, all 0.4s ease-out 0s;
 }
 
 .div6firstc {
