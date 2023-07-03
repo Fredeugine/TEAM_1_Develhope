@@ -4,26 +4,33 @@ import { Link } from "react-router-dom";
 let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
 
 export default function Footer() {
-  // useEffect(function () {
-  //   const DarkModeBtn = document.querySelectorAll('.DWswitch')
-  //   const Moon = document.querySelectorAll('.circo')
-  //   const DLsvg = document.querySelector('.drch')
-  //
-  //   let dark = 0
-  //   DarkModeBtn[0].addEventListener('click', function () {
-  //     console.log('blue')
-  //     if (dark === 0) {
-  //       DLsvg.src = '/images/sun2.svg'
-  //       Moon[0].style.transform = 'translateX(-110%)'
-  //       dark++
-  //     } else {
-  //       DLsvg.src = '/images/Moon2.svg'
-  //       Moon[0].style.transform = 'translateX(0%)'
-  //       dark--
-  //     }
-  //   })
+  useEffect(function () {
+    const DarkModeBtn = document.querySelectorAll('.DWswitch')
+    const Moon = document.querySelectorAll('.circo')
+    const DLsvg = document.querySelector('.drch')
+    let dark = 0
 
-  // },[])
+    if(themePref !== "dark"){
+      DLsvg.src = '/images/sun2.svg'
+      Moon[0].style.transform = 'translateX(-110%)'
+      dark--
+    }
+
+
+    DarkModeBtn[0].addEventListener('click', function () {
+      console.log('blue')
+      if (dark === 0) {
+        DLsvg.src = '/images/sun2.svg'
+        Moon[0].style.transform = 'translateX(-110%)'
+        dark++
+      } else {
+        DLsvg.src = '/images/Moon2.svg'
+        Moon[0].style.transform = 'translateX(0%)'
+        dark--
+      }
+    })
+
+  },[])
   return (
     <footer style={{ background: "#27262c" }}>
       <div id="div10" className="div10">
