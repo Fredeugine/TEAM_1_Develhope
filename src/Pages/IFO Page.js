@@ -27,16 +27,9 @@ export function IFOPage(){
         animateValue(obj, 855, 85, 1500);
         animateValue(obj2, 718, 18 , 1500);
 // Index JS Starts
-        const pageUp = document.querySelector(".page-up");
 
-        window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 450) {
-                pageUp.style.display = "flex";
-                pageUp.style.visibility =  "visible";
-            } else {
-                pageUp.style.display = 'none';
-            }
-        });
+
+
 
 //Index Js Ends
 // IFO SECTION

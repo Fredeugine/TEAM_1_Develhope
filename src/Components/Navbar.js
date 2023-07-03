@@ -12,6 +12,17 @@ export function Navbar() {
     const Eth = document.querySelector("#apt");
     const bbb = document.querySelector("#bnbsc");
     const bnbImg = document.querySelector("#img_bnb");
+    const pageUp = document.querySelector(".page-up");
+
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 450) {
+        pageUp.style.display = "flex";
+        pageUp.style.visibility =  "visible";
+      } else {
+        pageUp.style.display = 'none';
+      }
+    });
 
     function BSC() {
       Eth.addEventListener("click", function () {
