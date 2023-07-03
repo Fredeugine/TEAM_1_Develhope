@@ -156,6 +156,17 @@ export function Navbar() {
         remove();
       });
     });
+    // toggleButton.addEventListener("click", () => {
+    //     if (toggleButton.checked){
+    //         toggleButton.style.transform = "translate(100%)"
+    //         document.querySelector('body').style.background='white'
+    //
+    //     }
+    //     else{
+    //         toggleButton.style.transform = "translate(-100%)"
+    //         document.querySelector('body').style.background='#08060b'
+    //     }
+    // })
   }, []);
 
   return (
