@@ -146,8 +146,11 @@
     0%{
         border-color: #74a9f3;
     }
-    100%{
+    50%{
         border-color: #9a6aff;
+    }
+    100%{
+        border-color: #58fde5
     }
 }
 .k1,.k2,.k3{

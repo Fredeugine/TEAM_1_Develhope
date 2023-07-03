@@ -631,8 +631,8 @@ export function Aptos_Page(){
                                 <span>Slippage tolerance <img className={'question'} src={ '/images/markq.svg'}/></span>
                                 <div className={'flr1'}>
                                     <button className={'slit'}>0.1%</button>
-                                    <button className={'slit'}>0.1%</button>
-                                    <button className={'slit'}>0.1%</button>
+                                    <button className={'slit'}>0.5%</button>
+                                    <button className={'slit'}>1%</button>
                                     <input className={'typ'} type={'text'} placeholder={'1.00'}/>
                                 </div>
                             </div>
