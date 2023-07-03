@@ -313,6 +313,13 @@ export function AffiliatesPage() {
           </div>
         </div>
       </div>
+      <div className="affi_transition">
+        <img
+          alt="affi_transition1"
+          className="affi_transition"
+          src="images/affi_trans1.png"
+        />
+      </div>
       <div className="container_section3">
         <div className="trans_section2_3" />
         <div className="parent_section3">
@@ -387,6 +394,13 @@ export function AffiliatesPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="affi_transition">
+        <img
+          alt="affi_transition2"
+          className="affi_transition"
+          src="images/affi_trans2.png"
+        />
       </div>
       <div
         className="div4_parent_container"
@@ -476,6 +490,13 @@ export function AffiliatesPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="affi_transition">
+        <img
+          alt="affi_transition3"
+          className="affi_transition"
+          src="images/affi_trans3.png"
+        />
       </div>
       <div className="container_section5">
         <div className="trans_section4_5" />
