@@ -3,22 +3,41 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { MbNavbar, Navbar } from "../Components/Navbar";
 import { Aptos_Page } from "./Aptos_Page";
 import { IFOPage } from "./IFO Page";
+import {click} from "@testing-library/user-event/dist/click";
 
 let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
 
 export function Homepage() {
   useEffect(() => {
-    // toggleButton.addEventListener("click", () => {
-    //     if (toggleButton.checked){
-    //         toggleButton.style.transform = "translate(100%)"
-    //         document.querySelector('body').style.background='white'
-    //
-    //     }
-    //     else{
-    //         toggleButton.style.transform = "translate(-100%)"
-    //         document.querySelector('body').style.background='#08060b'
-    //     }
-    // })
+
+    const visibleTable = document.querySelector(".div6_visible")
+    const hiddenTable = document.querySelector(".div6_hidden")
+    const switchButton = document.querySelector(".div6_switch");
+    const title = document.querySelector(".d6farms");
+    let clicked = 1;
+
+    function switchTable() {
+      if (clicked === 1) {
+        visibleTable.style.opacity = "1";
+        hiddenTable.style.opacity = "0";
+        hiddenTable.style.visibility= "hidden";
+        title.textContent = "Farms";
+        clicked--
+
+      } else if(clicked === 0) {
+        visibleTable.style.opacity = "0";
+        hiddenTable.style.opacity = "1";
+        hiddenTable.style.top = "90px";
+        hiddenTable.style.visibility= "visible";
+        title.textContent = "Syrup Pools";
+        clicked++
+      }
+    }
+
+    switchButton.addEventListener("click", switchTable);
+
+
+
   }, []);
   function blue() {
     return <></>;
