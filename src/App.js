@@ -33,7 +33,7 @@ function App() {
         <Route path="/Leaderboard" element={<LeaderboardPage />} />
         <Route path="/Swap" element={<Swap_Page />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
       <MbNavbar />
     </div>
   );
