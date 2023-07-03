@@ -35,7 +35,7 @@ export function Homepage() {
     }
 
     switchButton.addEventListener("click", switchTable);
-
+    setInterval(switchTable,4000)
 
 
   }, []);
