@@ -1,4 +1,4 @@
-import React, {setTimePeriod } from "react";
+import React, { setTimePeriod } from "react";
 import { Line } from "react-chartjs-2";
 
 const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {

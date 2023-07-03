@@ -299,36 +299,46 @@ export default function Footer() {
                   <div className="rep">EN</div>
                 </button>
                 <div className="abovelang" />
-                {/*{themePref === "dark" ? (*/}
-                {/*    <div className={'DWswitch'} onClick={() => {*/}
-                {/*      localStorage.setItem(*/}
-                {/*          "TYPE_OF_THEME",*/}
-                {/*          JSON.stringify("light")*/}
-                {/*      );*/}
-                {/*      window.location.reload(false);*/}
-                {/*    }} >*/}
-                {/*      <img src={'/images/sun.svg'}/>*/}
-                {/*      <img src={'/images/moon.svg'}/>*/}
-                {/*      <span className={'circo'}>*/}
-                {/*        <img className={'drch'} src={'/images/moon2.svg'}/>*/}
-                {/*      </span>*/}
-                {/*    </div>*/}
-                {/*) : (*/}
-                {/*    <div className={'DWswitch'} onClick={() => {*/}
-                {/*      localStorage.setItem(*/}
-                {/*          "TYPE_OF_THEME",*/}
-                {/*          JSON.stringify("dark")*/}
-                {/*      );*/}
-                {/*      window.location.reload(false);*/}
-                {/*    }} >*/}
-                {/*      <img src={'/images/sun.svg'}/>*/}
-                {/*      <img src={'/images/moon.svg'}/>*/}
-                {/*      <span className={'circo'}>*/}
-                {/*        <img className={'drch'} src={'/images/moon2.svg'}/>*/}
-                {/*      </span>*/}
-                {/*    </div>*/}
-                {/*)}*/}
                 {themePref === "dark" ? (
+                  <div
+                    className={"DWswitch"}
+                    onClick={() => {
+                      localStorage.setItem(
+                        "TYPE_OF_THEME",
+                        JSON.stringify("light")
+                      );
+                      setTimeout(() => {
+                        window.location.reload(false);
+                      }, 1000);
+                    }}
+                  >
+                    <img src={"/images/sun.svg"} />
+                    <img src={"/images/moon.svg"} />
+                    <span className={"circo"}>
+                      <img className={"drch"} src={"/images/moon2.svg"} />
+                    </span>
+                  </div>
+                ) : (
+                  <div
+                    className={"DWswitch"}
+                    onClick={() => {
+                      localStorage.setItem(
+                        "TYPE_OF_THEME",
+                        JSON.stringify("dark")
+                      );
+                      setTimeout(() => {
+                        window.location.reload(false);
+                      }, 1000);
+                    }}
+                  >
+                    <img src={"/images/sun.svg"} />
+                    <img src={"/images/moon.svg"} />
+                    <span className={"circo"}>
+                      <img className={"drch"} src={"/images/moon2.svg"} />
+                    </span>
+                  </div>
+                )}
+                {/* {themePref === "dark" ? (
                   <button
                     className="light_switchbutton"
                     onClick={() => {
@@ -362,7 +372,7 @@ export default function Footer() {
                       src="/images/sunshine.svg"
                     ></img>
                   </button>
-                )}
+                )} */}
               </div>
             </div>
             <div className="endlogo">
