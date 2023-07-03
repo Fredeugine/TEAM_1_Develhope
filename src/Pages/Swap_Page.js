@@ -287,7 +287,7 @@ export default function Swap_Page(){
                                 <span className={'ndHlp'}>Need help ?</span>
                                 <span><img className={'ndd'} src={'/images/wing.svg'}/></span>
                             </div>
-                            <div className={'hpng'}><img className={'hpng'} src={'/images/help.png'}/></div>
+                            <div className={'hpng'}><img className={'hpng'} src={'/images/needHelp.png'}/></div>
                         </div>
                     </div>
 
