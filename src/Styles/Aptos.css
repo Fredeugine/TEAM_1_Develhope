@@ -650,6 +650,7 @@ footer{
     max-width: 300px;
     width: 100%;
     flex-direction: column;
+    gap: 12px;
     display: flex;
     align-items: flex-start;
 }
@@ -714,6 +715,9 @@ footer{
 .typ::placeholder{
     font-size: 16px;
     color: #f4eeff;
+}
+.closex{
+    cursor: pointer;
 }
 
 
