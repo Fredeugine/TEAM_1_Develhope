@@ -14,12 +14,13 @@ export default function Swap() {
 
   return (
     <div>
-        <HeaderOptions />
-      <InfoCard onLeftCardSelection={handleLeftCardSelection} />
-
+      <HeaderOptions />
       <div>
-        {leftCard === "graph" && <GraphCard />}
-        {leftCard === "priceChangeList" && <PriceChangeListCard />}
+        <InfoCard onLeftCardSelection={handleLeftCardSelection} />
+        <div>
+          {leftCard === "graph" && <GraphCard />}
+          {leftCard === "priceChangeList" && <PriceChangeListCard />}
+        </div> 
       </div>
     </div>
   );
