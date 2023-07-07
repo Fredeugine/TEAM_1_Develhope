@@ -2,7 +2,7 @@ import '../Styles/styles.css'
 import '../Styles/Aptos.css'
 import React, {useEffect} from "react";
 
-
+// make compact
 function Crd2Inn1(){
     return (
         <>
@@ -15,6 +15,7 @@ function Crd2Inn1(){
         </>
     )
 }
+// make compact
 function Crd2Inn12(){
     return (
         <>
@@ -86,19 +87,19 @@ export default function Swap_Page(){
         })
 
         let dark = 0
-        let dark2 = 0
+        let lightButton = 0
 
         function toggleDarkMode(index) {
             const button = DarkModeBtn[index];
             const moon = Moon[index];
-            const backgroundColor = dark2 === 0 ? '#31d0aa' : '#372f47';
+            const backgroundColor = lightButton === 0 ? '#31d0aa' : '#372f47';
 
-            if (dark2 === 0) {
+            if (lightButton === 0) {
                 moon.style.transform = 'translateX(110%)';
-                dark2++;
+                lightButton++;
             } else {
                 moon.style.transform = 'translateX(0%)';
-                dark2--;
+                lightButton--;
             }
 
             button.style.backgroundColor = backgroundColor;

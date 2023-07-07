@@ -32,6 +32,7 @@ function App() {
         <Route path="/IFO" element={<IFOPage></IFOPage>} />
         <Route path="/Leaderboard" element={<LeaderboardPage />} />
         <Route path="/Swap" element={<Swap_Page />} />
+        <Route path="/testingswap" element={<Swap />} />
       </Routes>
       <Footer />
       <MbNavbar />
