@@ -15,7 +15,7 @@ export default function Swap() {
   return (
     <div>
       <HeaderOptions />
-      <div>
+      <div className="swapbody">
         <InfoCard onLeftCardSelection={handleLeftCardSelection} />
         <div>
           {leftCard === "graph" && <GraphCard />}
