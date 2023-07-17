@@ -28,10 +28,10 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/affiliates-program" element={<AffiliatesPage />} />
-        <Route path="/Aptos" element={<Aptos_Page />} />
-        <Route path="/IFO" element={<IFOPage></IFOPage>} />
-        <Route path="/Leaderboard" element={<LeaderboardPage />} />
-        <Route path="/Swap" element={<Swap_Page />} />
+        <Route path="/aptos" element={<Aptos_Page />} />
+        <Route path="/ifo" element={<IFOPage></IFOPage>} />
+        <Route path="/leaderboard" element={<LeaderboardPage />} />
+        <Route path="/swap" element={<Swap_Page />} />
         <Route path="/testingswap" element={<Swap />} />
       </Routes>
       <Footer />
