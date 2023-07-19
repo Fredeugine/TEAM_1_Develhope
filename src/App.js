@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 
 // Layouts
 import { MbNavbar, Navbar } from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 // Pages
 import { Homepage } from "./Pages/Homepage";
@@ -15,7 +16,6 @@ import Swap from "./Pages/Swap";
 import Swap_Page from './Pages/Swap_Page';
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
-import Footer from "./Components/Footer";
 import PageNotFound from "./Components/PageNotFound";
 
 let darkPref = localStorage.getItem("darkMode");
