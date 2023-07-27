@@ -3,15 +3,14 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { MbNavbar, Navbar } from "../Components/Navbar";
 import { Aptos_Page } from "./Aptos_Page";
 import { IFOPage } from "./IFO Page";
-import {click} from "@testing-library/user-event/dist/click";
+import { click } from "@testing-library/user-event/dist/click";
 
 let themePref = JSON.parse(localStorage.getItem("TYPE_OF_THEME")) || "dark";
 
 export function Homepage() {
   useEffect(() => {
-
-    const visibleTable = document.querySelector(".div6_visible")
-    const hiddenTable = document.querySelector(".div6_hidden")
+    const visibleTable = document.querySelector(".div6_visible");
+    const hiddenTable = document.querySelector(".div6_hidden");
     const switchButton = document.querySelector(".div6_switch");
     const title = document.querySelector(".d6farms");
     let clicked = 1;
@@ -20,24 +19,21 @@ export function Homepage() {
       if (clicked === 1) {
         visibleTable.style.opacity = "1";
         hiddenTable.style.opacity = "0";
-        hiddenTable.style.visibility= "hidden";
+        hiddenTable.style.visibility = "hidden";
         title.textContent = "Farms";
-        clicked--
-
-      } else if(clicked === 0) {
+        clicked--;
+      } else if (clicked === 0) {
         visibleTable.style.opacity = "0";
         hiddenTable.style.opacity = "1";
         hiddenTable.style.top = "90px";
-        hiddenTable.style.visibility= "visible";
+        hiddenTable.style.visibility = "visible";
         title.textContent = "Syrup Pools";
-        clicked++
+        clicked++;
       }
     }
 
     switchButton.addEventListener("click", switchTable);
-    setInterval(switchTable,4000)
-
-
+    setInterval(switchTable, 4000);
   }, []);
   function blue() {
     return <></>;
@@ -688,6 +684,7 @@ export function Homepage() {
                   <a
                     href="https://docs.pancakeswap.finance/tokenomics/cake"
                     className="div8_learn"
+                    id="div8_learn_button"
                   >
                     Learn
                     <img src="/images/div8_1.svg" />

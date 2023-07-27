@@ -737,6 +737,10 @@ body{
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
 }
 
+.btn_trade_now:hover {
+  text-decoration: underline;
+}
+
 .btn_tc_div {
     display: flex;
     gap: 9px;
@@ -1708,6 +1712,11 @@ body {
     text-decoration-line: underline;
 }
 
+.Learn_trade_svg {
+  position: relative;
+  top: 2px;
+}
+
 .buttons_trade img {
     align-self: center;
     margin-left: 4px;
@@ -2057,6 +2066,10 @@ body {
     font-weight: 600;
     line-height: 1.5;
     font-size: 16px;
+}
+
+#div6_learn:hover {
+  text-decoration: underline;
 }
 
 .div6_explore {
@@ -2800,11 +2813,14 @@ body {
 .div8_learn {
     display: flex;
     align-items: center;
-    text-decoration: none;
     color: #1fc7d4;
     font-weight: 600;
     line-height: 1.5;
     gap: 5px;
+}
+
+#div8_learn_button:hover {
+  text-decoration: underline;
 }
 
 #div8_learn:hover {
@@ -3351,6 +3367,15 @@ body {
     font-size: 16px;
 }
 
+.education:hover {
+  text-decoration: underline;
+}
+
+.buttonwallet:hover {
+  background-color: #1fc8d47d;
+  transition: 0.3s ease-in-out;
+}
+
 .secsvg {
     align-self: center;
     flex-shrink: 0;
@@ -3443,6 +3468,8 @@ a {
     text-decoration: none;
 }
 
+
+
 .div10 .frombrand {
     color: #f4eeff;
     display: flex;
@@ -3453,6 +3480,10 @@ a {
     font-size: 16px;
     text-decoration: none;
 
+}
+
+.frombrand:hover {
+  text-decoration: underline;
 }
 
 .iconpage {
@@ -3470,6 +3501,12 @@ a {
     line-height: 1.5;
     text-decoration: none;
     font-size: 16px;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.socials_icon:hover {
+  background-color: rgb(81, 81, 81);
 }
 
 .pancklogo {
@@ -3712,6 +3749,10 @@ a {
     box-shadow: none;
 }
 
+.worldlang:hover {
+  background-color: rgb(81, 81, 81);
+}
+
 .langexchange {
     align-self: center;
     flex-shrink: 0;
@@ -3813,6 +3854,10 @@ a {
     transition-timing-function: ease, ease;
     transition-delay: 0s, 0s;
     transition-property: background-color, opacity;
+}
+
+.buycake:hover {
+  opacity: 0.5;
 }
 
 .buycakesvg {
