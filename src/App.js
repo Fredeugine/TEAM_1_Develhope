@@ -13,7 +13,7 @@ import { Homepage } from "./Pages/Homepage";
 import { LeaderboardPage } from "./Pages/Leaderboard Page";
 import { IFOPage } from "./Pages/IFO Page";
 import Swap from "./Pages/Swap";
-import Swap_Page from './Pages/Swap_Page';
+import Swap_Page from "./Pages/Swap_Page";
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
 import PageNotFound from "./Components/PageNotFound";

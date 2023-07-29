@@ -1,24 +1,29 @@
+
+
 #leaderboard_div1 {
-    background-color: black;
     padding: 20px;
+    padding-bottom: 80px;
     position: relative;
     display: flex;
-    max-width: 100vw;
+    max-width: 80vw;
     margin-top: 0px;
     font-family: Kanit,sans-serif;
+    justify-content: center;
+    margin-left: 10%;
 }
 
 .leaderboard_div2 {
-    flex-grow: 1;
+  flex-grow: 0.5;
     transition-duration: 0.2s, 0.2s;
     transition-timing-function: ease, cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0s, 0s;
     transition-property: margin-top, margin-left;
     transform: translate3d(0px, 0px, 0px);
     max-width: 100%;
+    justify-content: center;
 }
 
-.boardcontent {
+.board_content {
     border-bottom: 2px solid #b8add2;
     margin-bottom: 24px;
     padding-bottom: 24px;
@@ -48,7 +53,7 @@
 .sub_topic {
     font-size: 32px;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 0.1;
     color: #f4eeff;
 }
 
@@ -96,7 +101,9 @@
     font-size: 40px;
     display: flex;
     flex: 1 1 0%;
-    padding: 24px;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 32px;
 }
 
 .box-content {
@@ -126,13 +133,13 @@
     color: #f4eeff;
     font-size: 40px;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 0.2;
 }
 
 .teams-text {
     color: #B8ADDC;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 0;
     padding-right: 24px;
     margin-bottom: 16px;
     font-size: 16px;
@@ -210,6 +217,10 @@
     color: #1fc7d4;
 }
 
+.see-more:hover {
+  opacity: 0.4;
+}
+
 .sideimg {
     display: block;
     margin-left: 24px;
@@ -249,7 +260,7 @@
         font-size: 40px;
         display: flex;
         flex: 1 1 0%;
-        padding: 24px;
+        padding: 12px;
     }
 
     .main-topic {
@@ -275,4 +286,144 @@
         border-radius: 50%;
         max-width: 100%;
     }
+}
+
+
+@media screen and (min-width: 968px) {
+  .main_topic {
+    font-size: 64px;
+    padding-top: 50px ;
+    line-height: 0.2;
+  }
+
+  .sub_topic {
+    font-size: 40px;
+  }
+}
+
+
+/* team page begins */
+
+.overviewButton {
+  display: flex;
+  color: #1fc7d4;
+}
+.overviewButton svg {
+  display: flex;
+}
+
+.overviewButton:hover {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.teamMain {
+  background: #27262c;
+  color: #f4eeff;
+  border-radius: 24px;
+  border-bottom: 4px solid #383241;
+  margin-top: 50px;
+}
+
+.teamMain_top {
+  height: 182px;
+  padding: 0px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 24px 24px 0px 0px;
+}
+
+.teamPic img {
+ border-radius: 50%;
+ border: 2px solid white;
+}
+
+.teamH1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 0.1;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+
+.teamH2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(25, 19, 38);
+  padding-bottom: 20px  ;
+}
+
+.teamMain_bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.teamMain_cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.teamMain_card1, .teamMain_card2 {
+  display: flex;
+  flex-direction: row;
+  flex: 0.5;
+  border: 2px solid #353547;
+  border-radius: 16px;
+  padding: 10px;
+  border-bottom: 4px solid #353547;
+}
+
+.teamMain_card1:hover, .teamMain_card2:hover {
+  background-color: #3a3646;
+  border: 2px solid #595977;
+  border-bottom: 4px solid #595977;
+  transition: 0.3s ease;
+}
+
+.teamMain_card1 svg, .teamMain_card2 svg {
+  padding: 15px;
+}
+
+.teamMain_cardH2 {
+  color: #b8add2;
+  margin: 10px;
+}
+
+.teamMain_cardH1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.disabledText {
+  color: #666171;
+}
+
+.teamMain2 {
+  background: #27262c;
+  color: #f4eeff;
+  border-radius: 24px;
+  border-bottom: 4px solid #383241;
+  margin-top: 50px;
+  position: relative;
+  top: -20px;
+}
+
+.teamMain2_header {
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.teamMain2_comingsoon {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #666171;
+padding-bottom: 24px;
 }

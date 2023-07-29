@@ -14,13 +14,12 @@ export function Navbar() {
     const bnbImg = document.querySelector("#img_bnb");
     const pageUp = document.querySelector(".page-up");
 
-
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 450) {
         pageUp.style.display = "flex";
-        pageUp.style.visibility =  "visible";
+        pageUp.style.visibility = "visible";
       } else {
-        pageUp.style.display = 'none';
+        pageUp.style.display = "none";
       }
     });
 
@@ -262,17 +261,13 @@ export function Navbar() {
                 Info
               </span>
               <Link id="ifo" to={"/IFO"}>
-                <span  className="opt_kids">
-                  IFO
-                </span>
+                <span className="opt_kids">IFO</span>
               </Link>
               <span className="opt_kids">Voting</span>
-              <Link  id="affiliates"  to={"/affiliates-program"}>
-                <span className="opt_kids">
-                  Affiliate Program
-                </span>
+              <Link id="affiliates" to={"/affiliates-program"}>
+                <span className="opt_kids">Affiliate Program</span>
               </Link>
-              <Link id="ooo" to={'/Leaderboard'}>
+              <Link id="ooo" to={"/leaderboard"}>
                 <span className="opt_kids">Leaderboard</span>
               </Link>
               <span className="opt_kids" id="blog">
