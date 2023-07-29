@@ -307,9 +307,15 @@
 .overviewButton {
   display: flex;
   color: #1fc7d4;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
 }
 .overviewButton svg {
   display: flex;
+  position: relative;
+  top: 2.5px;
 }
 
 .overviewButton:hover {
