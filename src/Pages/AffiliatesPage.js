@@ -127,9 +127,11 @@ export function AffiliatesPage() {
             </svg>
           </a>
         </div>
-        <div className="header2_dashboard">
-          <a href="#dashboard">Dashboard</a>
-        </div>
+        <Link to={`/affiliates-dashboard`}>
+          <div className="header2_dashboard">
+            <a href="#dashboard">Dashboard</a>
+          </div>
+        </Link>
       </div>
       <div className="container_section1">
         <div className="parent_section1">

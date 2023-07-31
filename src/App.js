@@ -17,6 +17,7 @@ import Swap_Page from "./Pages/Swap_Page";
 import { AffiliatesPage } from "./Pages/AffiliatesPage";
 import { Aptos_Page } from "./Pages/Aptos_Page";
 import PageNotFound from "./Components/PageNotFound";
+import { AffiliatesDashboard } from "./Pages/AffiliatesDashboard";
 
 let darkPref = localStorage.getItem("darkMode");
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/affiliates-program" element={<AffiliatesPage />} />
+        <Route path="/affiliates-dashboard" element={<AffiliatesDashboard />} />
         <Route path="/aptos" element={<Aptos_Page />} />
         <Route path="/ifo" element={<IFOPage></IFOPage>} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
