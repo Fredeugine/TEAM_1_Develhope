@@ -3,6 +3,7 @@ import "../Styles/styles.css";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Navbar, MbNavbar } from "../Components/Navbar";
+import Draggable, { DraggableCore } from "react-draggable";
 export default function Team({
   teamLogo,
   teamName,
@@ -12,11 +13,32 @@ export default function Team({
 }) {
   return (
     <div>
-      <div className="teamMain">
-        <div className="teamMain_top" style={{ backgroundColor: bannerColor }}>
-          <div className="teamPic">
-            <img src={teamLogo}></img>
-          </div>
+      <div
+        className="teamMain"
+        style={{
+          border: "none",
+          border: `2px solid ${bannerColor}`,
+        }}
+      >
+        <div
+          className="teamMain_top"
+          style={{
+            backgroundColor: bannerColor,
+            filter: `drop-shadow(0px 0px 20px ${bannerColor})`,
+          }}
+        >
+          <Draggable>
+            <div className="teamPic draggable">
+              <div className="flipper">
+                <div className="front">
+                  <img src={teamLogo} draggable={false}></img>
+                </div>
+                <div className="back">
+                  <img src="/images/7186.png" draggable={false}></img>
+                </div>
+              </div>
+            </div>
+          </Draggable>
           <p className="teamH1">{teamName}</p>
           <p className="teamH2">{teamPromo}</p>
         </div>
@@ -45,7 +67,6 @@ export default function Team({
                 viewBox="0 0 48 48"
                 fill="#666171"
                 width="44px"
-                color="textDisabled"
                 xmlns="http://www.w3.org/2000/svg"
                 class="sc-231a1e38-0 iwkKGc"
               >
@@ -61,7 +82,7 @@ export default function Team({
           </div>
         </div>
       </div>
-      <div className="teamMain2">
+      <div className="teamMain2" style={{ border: `2px solid ${bannerColor}` }}>
         <div className="teamMain2_header">Team Achievements</div>
         <div className="teamMain2_comingsoon">
           <svg

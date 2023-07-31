@@ -2,6 +2,7 @@ import "../Styles/affiliates.css";
 import { useEffect } from "react";
 import { Navbar } from "../Components/Navbar";
 import { MbNavbar } from "../Components/Navbar";
+import { Link } from "react-router-dom";
 
 export function AffiliatesPage() {
   useEffect(function () {
@@ -30,11 +31,11 @@ export function AffiliatesPage() {
       if (hiddenRow1.style.display === "none") {
         hiddenRow1.style.display = "flex";
         detailsButton1.innerHTML =
-          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;transform:rotate(180deg);'>";
+          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;transform:rotate(180deg);'>";
       } else {
         hiddenRow1.style.display = "none";
         detailsButton1.innerHTML =
-          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
+          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;'>";
       }
     });
 
@@ -43,11 +44,11 @@ export function AffiliatesPage() {
       if (hiddenRow2.style.display === "none") {
         hiddenRow2.style.display = "flex";
         detailsButton2.innerHTML =
-          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;transform:rotate(180deg);'>";
+          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;transform:rotate(180deg);'>";
       } else {
         hiddenRow2.style.display = "none";
         detailsButton2.innerHTML =
-          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
+          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;'>";
       }
     });
 
@@ -56,11 +57,11 @@ export function AffiliatesPage() {
       if (hiddenRow3.style.display === "none") {
         hiddenRow3.style.display = "flex";
         detailsButton3.innerHTML =
-          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;transform:rotate(180deg);'>";
+          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;transform:rotate(180deg);'>";
       } else {
         hiddenRow3.style.display = "none";
         detailsButton3.innerHTML =
-          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
+          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;'>";
       }
     });
 
@@ -69,11 +70,11 @@ export function AffiliatesPage() {
       if (hiddenRow4.style.display === "none") {
         hiddenRow4.style.display = "flex";
         detailsButton4.innerHTML =
-          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;transform:rotate(180deg);'>";
+          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;transform:rotate(180deg);'>";
       } else {
         hiddenRow4.style.display = "none";
         detailsButton4.innerHTML =
-          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
+          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;'>";
       }
     });
 
@@ -82,11 +83,11 @@ export function AffiliatesPage() {
       if (hiddenRow5.style.display === "none") {
         hiddenRow5.style.display = "flex";
         detailsButton5.innerHTML =
-          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;transform:rotate(180deg);'>";
+          "Hide<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;transform:rotate(180deg);'>";
       } else {
         hiddenRow5.style.display = "none";
         detailsButton5.innerHTML =
-          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:5px;position:relative;'>";
+          "Details<img src='images/affi-images/affi_down_arrow.svg' style='margin-left:8px;top:4px;position:relative;'>";
       }
     });
   }, []);
@@ -105,9 +106,11 @@ export function AffiliatesPage() {
         </svg>
       </a>
       <div className="header2">
-        <div className="header2_overview">
-          <a href="affiliates-program.html">Overview</a>
-        </div>
+        <Link to={`/affiliates-program`}>
+          <div className="header2_overview">
+            <a>Overview</a>
+          </div>
+        </Link>
         <div className="header2_application">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfP43IciQ5cH0JhTf1fDgUpwapBx-yD3ybv24pBdiVW7Th5jQ/viewform"
