@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { setTimePeriod } from "react";
 import { Line } from "react-chartjs-2";
 
-const GraphCard = ({ exchangeRate, selectedCurrencyPair }) => {
-  const [timePeriod, setTimePeriod] = useState("24H"); // Initialize the state with "24H"
-
+const GraphCard = ({ exchangeRate, selectedCurrencyPair, timePeriod }) => {
   // Placeholder data for the chart
   const chartData = {
     labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
@@ -25,16 +23,16 @@ const GraphCard = ({ exchangeRate, selectedCurrencyPair }) => {
   };
 
   return (
-      <div className="graph-card">
-        <div className="exchange-rate">{exchangeRate}</div>
-        <Line data={chartData} options={chartOptions} />
-        <div className="time-period-options">
-          <button onClick={() => setTimePeriod("24H")}>24H</button>
-          <button onClick={() => setTimePeriod("1W")}>1W</button>
-          <button onClick={() => setTimePeriod("1M")}>1M</button>
-          <button onClick={() => setTimePeriod("1Y")}>1Y</button>
-        </div>
+    <div className="graph-card">
+      <div className="exchange-rate">{exchangeRate}</div>
+      <Line data={chartData} options={chartOptions} />
+      <div className="time-period-options">
+        <button onClick={() => setTimePeriod("24H")}>24H</button>
+        <button onClick={() => setTimePeriod("1W")}>1W</button>
+        <button onClick={() => setTimePeriod("1M")}>1M</button>
+        <button onClick={() => setTimePeriod("1Y")}>1Y</button>
       </div>
+    </div>
   );
 };
 
